@@ -36,7 +36,7 @@ module CPU (clock, reset, key_interrupt);
 
 
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "";
+	localparam INSTR_FILE = ""; // TODO: reference CPU/Assembly/game.s
 
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset),
