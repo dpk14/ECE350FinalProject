@@ -24,8 +24,9 @@
  *
  **/
 
-module CPU (clock, reset);
+module CPU (clock, reset, key_interrupt);
 	input clock, reset;
+	input key_interrupt;
 
 	wire rwe, mwe;
 	wire[4:0] rd, rs1, rs2;
@@ -50,7 +51,11 @@ module CPU (clock, reset);
 
 		// RAM
 		.wren(mwe), .address_dmem(memAddr),
-		.data(memDataIn), .q_dmem(memDataOut));
+		.data(memDataIn), .q_dmem(memDataOut),
+
+		// I/0
+		.key_interrupt(key_interrupt)
+		);
 
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({INSTR_FILE, ".mem"}))

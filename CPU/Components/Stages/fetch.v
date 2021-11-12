@@ -14,7 +14,10 @@ module fetch(
     // Stall handling
     should_stall_decode,
     f_d_instructions_output,
-    d_x_instructions_output
+    d_x_instructions_output,
+
+    // I/0
+    key_interrupt
 	);
 
 	// Control signals
@@ -31,13 +34,16 @@ module fetch(
 	input should_stall_decode;
 	input [31:0] f_d_instructions_output, d_x_instructions_output;
 
+	// I/0
+	input key_interrupt;
+
 	wire [31:0] current_pc, new_pc, decremented_pc;
 
 	wire isNotEqual, isLessThan, overflow;
 	wire should_stall;
 
 
-	reg_32 program_counter_reg(.out(current_pc), .in(should_stall_decode ? current_pc : new_pc), .clk(clock), .clr(reset),
+	reg_32 program_counter_reg(.out(current_pc), .in(should_stall_decode || key_interrupt ? current_pc : new_pc), .clk(clock), .clr(reset),
 	                           .in_enable(1'b1), .out_enable(1'b1));
 
     my_alu pc_incrementer(.data_operandA(current_pc), .data_operandB(32'b1), .data_result(incremented_pc),
@@ -56,7 +62,7 @@ module fetch(
     div d_x_is_div_type(.is_type(div_d_x_opcode), .instruction(d_x_instructions_output));
 
     assign should_stall_fetch = mult_f_d_opcode || div_f_d_opcode || mult_d_x_opcode || div_d_x_opcode;
-    assign should_stall = should_stall_fetch || should_stall_decode;
+    assign should_stall = should_stall_fetch || should_stall_decode || key_interrupt;
 
     assign new_pc = should_jump ? jump_to : incremented_pc;
     assign address_imem = current_pc;
