@@ -5,7 +5,7 @@ module InputController(key_interrupt, jump_key, frame_rt_clk, sysclk, reset);
 
     // reads from different registers at frame rate, compares contents
 
-    reg key_interrupt_reg;
+    reg key_interrupt_reg = 0;
 
     always @(posedge frame_rt_clk or posedge reset) begin
         if(reset) begin

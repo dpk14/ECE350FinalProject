@@ -12,7 +12,7 @@ module Main(clk, jump);
     wire frame_rate_clk;
 
     clock_divider frame_rate_clock_divider(.divclk(frame_rate_clk), .divclkfreq(GAME_FRAME_RT),
-                                           .sysclkfreq(clk), .sysclkfreq(SYSTEM_FREQ));
+                                           .sysclk(clk), .sysclkfreq(SYSTEM_FREQ));
 
 
     // TODO: Find way to externalize CPU regs and have them as outputs here to be read by VGAController and AudioController

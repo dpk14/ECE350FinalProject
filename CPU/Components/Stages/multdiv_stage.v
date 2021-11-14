@@ -24,7 +24,7 @@ module multdiv_stage(
                                 .clk(clock), .clr(reset), .in_enable(1'b1), .out_enable(1'b1));
 
 
-    my_multdiv multdiv(.data_operandA(data_operandA), .data_operandB(data_operandB),
+    multdiv multdiv(.data_operandA(data_operandA), .data_operandB(data_operandB),
                         .ctrl_MULT(ctrl_MULT), .ctrl_DIV(ctrl_DIV), .clock(clock),
                         .data_result(data_result), .data_resultRDY(data_resultRDY),
                         .data_exception(data_exception));

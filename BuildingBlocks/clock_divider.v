@@ -1,17 +1,18 @@
 module clock_divider(
-    input        sysclk, 		// System Clock Input 100 Mhz
-    input        sysclkfreq,
-    input        divclkfreq,
-    output       divclk);
+    sysclk, 		// System Clock Input 100 Mhz
+    sysclkfreq,
+    divclkfreq,
+    divclk);
 
-    input [31:0] sysclkfreq, divclkfreq;
+    input [63:0] sysclkfreq;
+    input [63:0] divclkfreq;
     input sysclk;
 
     output divclk;
 
-    wire[31:0] CounterLimit;
+    wire[64:0] CounterLimit;
     reg divided_clk = 0;
-    reg[31:0] counter = 0;
+    reg[64:0] counter = 0;
     
     assign CounterLimit = (sysclkfreq / (2 * divclkfreq)) - 1;
     
