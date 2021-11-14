@@ -24,9 +24,9 @@
  *
  **/
 
-module CPU (clock, reset, key_interrupt);
+module CPU (clock, reset, interrupt_instruction);
 	input clock, reset;
-	input key_interrupt;
+	input [31:0] interrupt_instruction;
 
 	wire rwe, mwe;
 	wire[4:0] rd, rs1, rs2;
@@ -54,7 +54,7 @@ module CPU (clock, reset, key_interrupt);
 		.data(memDataIn), .q_dmem(memDataOut),
 
 		// I/0
-		.key_interrupt(key_interrupt)
+		.interrupt_instruction(interrupt_instruction)
 		);
 
 	// Instruction Memory (ROM)

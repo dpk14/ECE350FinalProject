@@ -1,13 +1,15 @@
-module InputController(key_interrupt, jump_key, frame_rt_clk, sysclk, reset);
+module InputController(interrupt_instrucion, jump_key, frame_rt_clk, sysclk, reset);
 
     input frame_rt_clk, sysclk, reset, jump_key;
-    output key_interrupt;
+    output [31:0] interrupt_instrucion;
 
     // reads from different registers at frame rate, compares contents
 
     reg key_interrupt_reg = 0;
+    reg next_frame_rdy = 0;
 
     always @(posedge frame_rt_clk or posedge reset) begin
+        next_frame_rdy <= 1;
         if(reset) begin
             key_interrupt_reg <= 0;
         end else begin
@@ -21,11 +23,23 @@ module InputController(key_interrupt, jump_key, frame_rt_clk, sysclk, reset);
     // so that only one interrupt instruction is sent to CPU
 
     always @(negedge sysclk) begin
+
         if (key_interrupt_reg) begin
             key_interrupt_reg <= 0;
         end
+        if (next_frame_rdy) begin
+            next_frame_rdy <= 0;
+        end
     end
 
-    assign key_interrupt = key_interrupt_reg;
+    wire [31:0] input_instruction, frame_rdy_instruction;
+
+    jump_key_input_instructionbuilder jump_inst_builder(.instruction(input_instruction));
+    frame_rdy_instructionbuilder frame_rdy_inst_builder(.instruction(frame_rdy_instruction));
+
+    assign interrupt_instrucion = input_instruction != 32'b0 ? input_instruction :
+                                  frame_rdy_instruction != 32'b0 ? frame_rdy_instruction :
+                                  32'b0;
+
 
 endmodule

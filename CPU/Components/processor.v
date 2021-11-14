@@ -42,7 +42,7 @@ module processor(
     data_readRegB,                   // I: Data from port B of RegFile
 
 	// I/O
-	key_interrupt
+	interrupt_instruction
 	);
 
 	// Control signals
@@ -64,7 +64,7 @@ module processor(
 	input [31:0] data_readRegA, data_readRegB;
 
 	// I/O
-	input key_interrupt;
+	input [31:0] interrupt_instruction;
 
 	/* YOUR CODE STARTS HERE */
 
@@ -82,7 +82,7 @@ module processor(
 	              .d_x_instructions_output(d_x_instructions_output),
 	              .f_d_instructions_output(f_d_instructions_output),
 
-	              .key_interrupt(key_interrupt),
+	              .interrupt_instruction(interrupt_instruction),
 
 	              .clock(!clock), .reset(reset));
 
@@ -96,10 +96,10 @@ module processor(
 
     wire [31:0] operand_A_output_decode_stage, operand_B_output_decode_stage;
 
-    wire [31:0] input_instruction;      // TODO build instruction to be written on user input
 
     decode decoder(.f_d_pc_output(f_d_pc_output), .f_d_instructions_output(f_d_instructions_output),
-                   .f_d_pc_input(incremented_pc), .f_d_instructions_input(key_interrupt ? input_instruction : q_imem),
+                    // if there is no interrupt instruction (if it is empty), proceed as usual, getting the next instruction from memory
+                   .f_d_pc_input(incremented_pc), .f_d_instructions_input(interrupt_instruction == 32'b0 ? q_imem : interrupt_instruction),
 
                    .ctrl_readRegA(ctrl_readRegA), .ctrl_readRegB(ctrl_readRegB), .ctrl_writeReg(ctrl_writeReg),
                    .data_readRegA(data_readRegA), .data_readRegB(data_readRegB), .data_writeReg(data_writeReg),

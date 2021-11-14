@@ -35,7 +35,7 @@ module fetch(
 	input [31:0] f_d_instructions_output, d_x_instructions_output;
 
 	// I/0
-	input key_interrupt;
+	input [31:0] interrupt_instruction;
 
 	wire [31:0] current_pc, new_pc, decremented_pc;
 
@@ -43,7 +43,7 @@ module fetch(
 	wire should_stall;
 
 
-	reg_32 program_counter_reg(.out(current_pc), .in(should_stall_decode || key_interrupt ? current_pc : new_pc), .clk(clock), .clr(reset),
+	reg_32 program_counter_reg(.out(current_pc), .in(should_stall_decode || interrupt_instruction != 32'b0 ? current_pc : new_pc), .clk(clock), .clr(reset),
 	                           .in_enable(1'b1), .out_enable(1'b1));
 
     my_alu pc_incrementer(.data_operandA(current_pc), .data_operandB(32'b1), .data_result(incremented_pc),
