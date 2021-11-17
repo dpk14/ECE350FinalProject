@@ -67,6 +67,7 @@ module VGAController(
     // Images:
 
     wire[BITS_PER_COLOR-1:0] backgroundColorData,   // 12-bit color data at current pixel
+                             splashScreenColorData,
                              pipe1_colorData, pipe2_colorData, pipe3_colorData, pipe4_colorData,
                              birdColorData;
 
@@ -74,7 +75,7 @@ module VGAController(
          inside_bird;
 
 
-        // background
+        // game background
         image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
                 .IMG_FILE("backgroundImage.mem"),
                 .CLR_FILE("backgroundColors.mem"))
@@ -82,6 +83,13 @@ module VGAController(
                     .imgAddress(x + 640*y),
                     .colorData(backgroundColorData));
 
+        // splash screen background
+        image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
+                .IMG_FILE("splashScreenImage.mem"),
+                .CLR_FILE("splashScreenColors.mem"))
+        background(.clk(clk),
+                    .imgAddress(x + 640*y),
+                    .colorData(splashScreenColorData));
 
         // bird
         BirdDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR),
@@ -111,7 +119,12 @@ module VGAController(
 
 
 	// Quickly assign the output colors to their channels using concatenation
+
+	wire game_underway = pipe1 != 32'b0 || pipe2 != 32'b0 || pipe3 != 32'b0 || pipe4 != 32'b0 ||
+                         bird_top_left != 32'b0 || current_score != 32'b0;
+
 	assign {VGA_R, VGA_G, VGA_B} =  !active ? 12'b0 :
+	                                !game_underway ? splashScreenColorData :
 	                                inside_pipe1 ? pipe1_colorData :
 	                                inside_pipe2 ? pipe2_colorData :
 	                                inside_pipe3 ? pipe3_colorData :
