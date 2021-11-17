@@ -6,7 +6,9 @@ module InputControllerTB;
     reg jump = 1;
 
     // output
-    wire frame_rate_clk, key_interrupt;
+    wire frame_rate_clk;
+
+    wire [31:0] interrupt_instruction;
 
     // definitions
 
@@ -15,7 +17,7 @@ module InputControllerTB;
 
     localparam GAME_FRAME_RT = 10*MHz;
 
-    InputController input_controller(.key_interrupt(key_interrupt), .jump_key(jump),
+    InputController input_controller(.interrupt_instrucion(interrupt_instruction), .jump_key(jump),
                                     .frame_rt_clk(frame_rate_clk), .sysclk(clock),
                                     .reset(1'b0));
 

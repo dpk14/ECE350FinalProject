@@ -37,8 +37,8 @@ module InputController(interrupt_instrucion, jump_key, frame_rt_clk, sysclk, res
     jump_key_input_instructionbuilder jump_inst_builder(.instruction(input_instruction));
     frame_rdy_instructionbuilder frame_rdy_inst_builder(.instruction(frame_rdy_instruction));
 
-    assign interrupt_instrucion = input_instruction != 32'b0 ? input_instruction :
-                                  frame_rdy_instruction != 32'b0 ? frame_rdy_instruction :
+    assign interrupt_instrucion = key_interrupt_reg != 32'b0 ? input_instruction :
+                                  next_frame_rdy != 32'b0 ? frame_rdy_instruction :
                                   32'b0;
 
 

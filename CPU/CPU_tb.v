@@ -95,7 +95,7 @@ module CPU_tb #(parameter FILE = "nop");
 		.data(memDataIn), .q_dmem(memDataOut),
 
 		// IO
-		.key_interrupt(1'b0)
+		.interrupt_instruction(32'b0)
 		);
 
 	// Instruction Memory (ROM)
