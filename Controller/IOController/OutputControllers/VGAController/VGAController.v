@@ -77,16 +77,16 @@ module VGAController(
 
         // game background
         image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
-                .IMG_FILE("backgroundImage.mem"),
-                .CLR_FILE("backgroundColors.mem"))
+                .IMG_FILE("background_image.mem"),
+                .CLR_FILE("background_colors.mem"))
         background(.clk(clk),
                     .imgAddress(x + 640*y),
                     .colorData(backgroundColorData));
 
         // splash screen background
         image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
-                .IMG_FILE("splashScreenImage.mem"),
-                .CLR_FILE("splashScreenColors.mem"))
+                .IMG_FILE("background_image.mem"),
+                .CLR_FILE("background_colors.mem"))
         background(.clk(clk),
                     .imgAddress(x + 640*y),
                     .colorData(splashScreenColorData));

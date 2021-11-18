@@ -1,6 +1,6 @@
-module InputController(interrupt_instrucion, jump_key, frame_rt_clk, sysclk, reset);
+module InputController(interrupt_instrucion, jump_key, frame_rt_clk, proc_clk, reset);
 
-    input frame_rt_clk, sysclk, reset, jump_key;
+    input frame_rt_clk, proc_clk, reset, jump_key;
     output [31:0] interrupt_instrucion;
 
     // reads from different registers at frame rate, compares contents
@@ -22,7 +22,7 @@ module InputController(interrupt_instrucion, jump_key, frame_rt_clk, sysclk, res
     // turns off key_interrupt_reg as soon as possible (1 sys clock cycle after the frame rate rises)
     // so that only one interrupt instruction is sent to CPU
 
-    always @(negedge sysclk) begin
+    always @(negedge proc_clk) begin
 
         if (key_interrupt_reg) begin
             key_interrupt_reg <= 0;

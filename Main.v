@@ -9,7 +9,6 @@ module Main(input clk,
             output[3:0] VGA_B,  // Blue Signal Bits
             inout ps2_clk,
             inout ps2_data);
-            );
 
     // definitions
 
@@ -42,9 +41,8 @@ module Main(input clk,
 
 
     InputController input_controller(.interrupt_instrucion(interrupt_instruction), .jump_key(jump),
-                                    .frame_rt_clk(frame_rate_clk), .sysclk(processor_clk),
+                                    .frame_rt_clk(frame_rate_clk), .proc_clk(processor_clk),
                                     .reset(1'b0));
 
-    VGAController vga_controller(
 
 endmodule
