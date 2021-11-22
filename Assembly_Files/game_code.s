@@ -2,6 +2,8 @@ init:
 #initialize score 
 #assume bird width to be 20
 #assume bird height to be 10
+
+
 #initialize game score to 0
 addi $r26, $r26, 0
 #bird's x coord
@@ -12,6 +14,10 @@ addi $r5, $r0, 325 (320+5)
 addi $r8, $r0, 1
 #r9 scores vertical height gained by bird on jump
 addi $r9, $r0, 10
+#r10 stores how many game rates we've gone through 
+addi $r10, $r0,0
+#$r11 stores number of game loops to go through before updating difficulty
+addi $r11, $r0, 1000
 
 
 game_loop:
@@ -21,8 +27,15 @@ jal button_pressed
 jal check_collision
 #update pipe position (may have to tweak addi parameter to see how fast pipe moves)
 sub $r1, $r1, $r8
+#update total count of game frame 
+addi $r10, $r10, 1
 #update score
 addi $r26,$r26,1
+#see if we need to up difficulty 
+bne $r10, $r11, game_loop
+#if equal then we update speed at which pipes move and clear r10
+addi $r8, $r8,1
+sub $r10, $r10, $r10
 #if no collision run back to game_loop
 j game_loop
 
