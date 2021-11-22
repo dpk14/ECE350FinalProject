@@ -18,7 +18,7 @@ game_loop:
 jal check_collision
 #if no collision run back to game_loop
 
-#update pipe position (may have to tweak addi parameter to see how fast pipe moves)
+#update pipe position (may have to tweak addi parameter to see how fast pipe moves)E
 addi $r1, $r1, -1
 j game_loop
 
