@@ -17,7 +17,7 @@ module fetch(
     d_x_instructions_output,
 
     // I/0
-    key_interrupt
+    interrupt_instruction
 	);
 
 	// Control signals
@@ -62,7 +62,7 @@ module fetch(
     div d_x_is_div_type(.is_type(div_d_x_opcode), .instruction(d_x_instructions_output));
 
     assign should_stall_fetch = mult_f_d_opcode || div_f_d_opcode || mult_d_x_opcode || div_d_x_opcode;
-    assign should_stall = should_stall_fetch || should_stall_decode || key_interrupt;
+    assign should_stall = should_stall_fetch || should_stall_decode || interrupt_instruction != 32'b0;
 
     assign new_pc = should_jump ? jump_to : incremented_pc;
     assign address_imem = current_pc;

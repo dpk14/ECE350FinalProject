@@ -137,11 +137,10 @@ module execute(
 
 
     // Jump logic
+        output [31:0] jump_to;
 
-        output should_jump_to_sum, should_jump_to_target, should_jump_to_reg;
-        output [31:0] jump_to,
-                      target, sign_extended_target, pc_immediate_sum;
-        wire [31:0] sign_extended_target;
+        wire should_jump_to_sum, should_jump_to_target, should_jump_to_reg;
+        wire [31:0] target, sign_extended_target, pc_immediate_sum;
 
             assign should_jump_to_sum = (bne_d_x_opcode && isNotEqual) ||
                                         (blt_d_x_opcode && isNotEqual && !isLessThan);

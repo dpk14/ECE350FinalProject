@@ -1,10 +1,15 @@
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Main.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\BuildingBlocks\clock_divider.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\BuildingBlocks\IMG_RAM.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\GameLogicController.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputController.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputControllerTB.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\AudioController.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGAController.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGATimingGenerator.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\BirdDisplay.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\Image.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\PipeDisplay.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\CPU.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\CPU_tb.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\BuildingBlocks\barrel_left_shifter.v
@@ -60,3 +65,4 @@ C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\Component
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\Components\Stages\writeback.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\InstructionBuilder\frame_rdy_instructionbuilder.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\InstructionBuilder\jump_key_input_instructionbuilder.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\RegisterParsers\pipe_register_parser.v

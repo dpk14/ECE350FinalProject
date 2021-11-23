@@ -51,7 +51,7 @@ module CPU (clock, reset,
 
 
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "/Assembly/game.s";
+	localparam INSTR_FILE = "../../../Assembly/game";
 
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset),

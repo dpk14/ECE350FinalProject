@@ -44,5 +44,42 @@ module Main(input clk,
                                     .frame_rt_clk(frame_rate_clk), .proc_clk(processor_clk),
                                     .reset(1'b0));
 
+    VGAController vga_controller(.pipe1(pipe1), .pipe2(pipe2), .pipe3(pipe3), .pipe4(pipe4),
+                                 .bird_top_left(bird_top_left),
+                                 .current_score(current_score), .high_score(high_score),
+
+                                 .hSync(hSync), .vSync(vSync),
+                                 .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_R(VGA_R),
+
+                                 .ps2_clk(ps2_clk), .ps2_data(ps2_data),
+
+                                .clk(clk), .reset(1'b0), .jump(jump));
+
+
+//	input clk, 			// 100 MHz System Clock
+//	input reset, 		// Reset Signal
+//
+//	// Game inputs
+//
+//	input jump,
+//
+//	// Register Contents
+//
+//	input[31:0] pipe1,
+//	input[31:0] pipe2,
+//    input[31:0] pipe3,
+//    input[31:0] pipe4,
+//
+//    input[31:0] bird_top_left,
+//    input[31:0] current_score,
+//    input[31:0] high_score,
+//
+//	output hSync, 		// H Sync Signal
+//	output vSync, 		// Veritcal Sync Signal
+//	output[3:0] VGA_R,  // Red Signal Bits
+//	output[3:0] VGA_G,  // Green Signal Bits
+//	output[3:0] VGA_B,  // Blue Signal Bits
+//	inout ps2_clk,
+//	inout ps2_data);
 
 endmodule
