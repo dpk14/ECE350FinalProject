@@ -62,7 +62,6 @@ button_pressed:
 addi $r5, $r5, $r9 
 jr $ra
 
-
 #if collsion occurs end game 
 end_game: 
  
