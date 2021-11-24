@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Nov 23 19:03:37 2021
+| Date         : Wed Nov 24 14:41:33 2021
 | Host         : LAPTOP-T0DSQ51U running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
 | Design       : Main
@@ -61,7 +61,7 @@ Table of Contents
 | No           | No                    | No                     |              19 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              65 |           17 |
-| Yes          | No                    | No                     |              10 |            4 |
+| Yes          | No                    | No                     |              10 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -75,7 +75,7 @@ Table of Contents
 +-----------------------------------------------+-----------------------------+----------------------------------------------+------------------+----------------+--------------+
 |  clk_IBUF_BUFG                                |                             |                                              |                7 |              9 |         1.29 |
 |  vga_controller/processor_clock_divider/clk25 |                             |                                              |                3 |             10 |         3.33 |
-|  vga_controller/processor_clock_divider/clk25 | vga_controller/Display/vPos |                                              |                4 |             10 |         2.50 |
+|  vga_controller/processor_clock_divider/clk25 | vga_controller/Display/vPos |                                              |                5 |             10 |         2.00 |
 |  clk_IBUF_BUFG                                |                             | vga_controller/processor_clock_divider/clear |               17 |             65 |         3.82 |
 +-----------------------------------------------+-----------------------------+----------------------------------------------+------------------+----------------+--------------+
 

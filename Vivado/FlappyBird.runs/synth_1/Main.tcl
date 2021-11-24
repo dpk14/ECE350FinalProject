@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -87,7 +89,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v
   C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/CPU.v
-  C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v
+  C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v
   C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v
   C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/InputController.v
   C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/BuildingBlocks/Mux2.v

@@ -42,7 +42,7 @@ module VGAController(
 		SCREEN_HEIGHT = 480, // Standard VGA Height
 		BITS_PER_COLOR = 12, // Nexys A7 uses 12 bits/color
 
-        PIPE_WIDTH = 70,
+        PIPE_WIDTH = 59,
         PIPE_CAP_HEIGHT = 10,
 
 		BIRD_WIDTH = 35,
@@ -88,8 +88,8 @@ module VGAController(
 
         // splash screen background
         image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
-                .IMG_FILE("background_image.mem"),
-                .CLR_FILE("background_colors.mem"))
+                .IMG_FILE("pipe_cap_image.mem"),
+                .CLR_FILE("pipe_cap_colors.mem"))
         splash(.clk(clk),
                     .imgAddress(x + 640*y),
                     .colorData(splashScreenColorData));
@@ -120,8 +120,6 @@ module VGAController(
             pipe4Display(.inside_pipe(inside_pipe4), .colorData(pipe4_colorData),
                                 .clk(clk), .x(x), .y(y), .pipe_reg(pipe4));
 
-
-	// Quickly assign the output colors to their channels using concatenation
 
 	wire game_underway = pipe1 != 32'b0 || pipe2 != 32'b0 || pipe3 != 32'b0 || pipe4 != 32'b0 ||
                          bird_top_left != 32'b0 || current_score != 32'b0;

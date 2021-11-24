@@ -17,7 +17,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10668
+INFO: [Synth 8-7075] Helper process launched with PID 3884
 WARNING: [Synth 8-6901] identifier 'BITS_PER_COLOR' is used before its declaration [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:6]
 WARNING: [Synth 8-6901] identifier 'PALETTE_ADDRESS_WIDTH' is used before its declaration [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:12]
 WARNING: [Synth 8-992] y_bottom_pipe_top is already implicitly declared earlier [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:54]
@@ -29,7 +29,7 @@ WARNING: [Synth 8-6901] identifier 'sign_extended_immediate' is used before its 
 WARNING: [Synth 8-6901] identifier 'sign_extended_target' is used before its declaration [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/Components/Stages/execute.v:126]
 WARNING: [Synth 8-1935] empty port in module declaration [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/Components/Stages/memory.v:22]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1000.742 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 999.645 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Main' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Main.v:1]
 	Parameter MHz bound to: 1000000 - type: integer 
@@ -142,11 +142,6 @@ INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/dpk14/SchoolProjects/EC
 	Parameter DEPTH bound to: 4096 - type: integer 
 	Parameter MEMFILE bound to: 208'b0010111000101110001011110010111000101110001011110010111000101110001011110100000101110011011100110110010101101101011000100110110001111001001011110110011101100001011011010110010100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file '../../../Assembly/game.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/Components/StageComponents/Memory/ROM.v:12]
-
-Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
 INFO: [Synth 8-6155] done synthesizing module 'ROM' (47#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/Components/StageComponents/Memory/ROM.v:3]
 INFO: [Synth 8-6157] synthesizing module 'my_regfile' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/Components/StageComponents/reg_file/my_regfile.v:1]
 INFO: [Synth 8-6157] synthesizing module 'decoder32' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/BuildingBlocks/decoder_32.v:1]
@@ -233,7 +228,7 @@ INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/dpk14/SchoolP
 	Parameter SCREEN_WIDTH bound to: 640 - type: integer 
 	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
-	Parameter PIPE_WIDTH bound to: 70 - type: integer 
+	Parameter PIPE_WIDTH bound to: 59 - type: integer 
 	Parameter PIPE_CAP_HEIGHT bound to: 10 - type: integer 
 	Parameter BIRD_WIDTH bound to: 35 - type: integer 
 	Parameter BIRD_HEIGHT bound to: 35 - type: integer 
@@ -265,25 +260,55 @@ INFO: [Synth 8-6157] synthesizing module 'image' [C:/Users/dpk14/SchoolProjects/
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
 	Parameter DEPTH bound to: 307200 - type: integer 
 	Parameter MEMFILE bound to: 168'b000000000110001001100001011000110110101101100111011100100110111101110101011011100110010001011111011010010110110101100001011001110110010100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'background_image.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM' (58#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-3876] $readmem data file 'background_image.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM' (58#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
 WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized0' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized0' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
 	Parameter DEPTH bound to: 256 - type: integer 
 	Parameter MEMFILE bound to: 176'b00000000011000100110000101100011011010110110011101110010011011110111010101101110011001000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'background_colors.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized0' (58#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-3876] $readmem data file 'background_colors.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized0' (58#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'image' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized0' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+	Parameter WIDTH bound to: 640 - type: integer 
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter IMG_FILE bound to: pipe_cap_image.mem - type: string 
+	Parameter CLR_FILE bound to: pipe_cap_colors.mem - type: string 
+	Parameter FILES_PATH bound to: (null) - type: string 
+	Parameter PIXEL_COUNT bound to: 307200 - type: integer 
+	Parameter PIXEL_ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
+	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized1' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 307200 - type: integer 
+	Parameter MEMFILE bound to: 152'b00000000011100000110100101110000011001010101111101100011011000010111000001011111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'pipe_cap_image.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized1' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized2' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 160'b0000000001110000011010010111000001100101010111110110001101100001011100000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'pipe_cap_colors.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized2' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized0' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
 INFO: [Synth 8-6157] synthesizing module 'BirdDisplay' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v:1]
 	Parameter SCREEN_WIDTH bound to: 640 - type: integer 
 	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
@@ -291,121 +316,114 @@ INFO: [Synth 8-6157] synthesizing module 'BirdDisplay' [C:/Users/dpk14/SchoolPro
 	Parameter BIRD_WIDTH bound to: 35 - type: integer 
 	Parameter BIRD_HEIGHT bound to: 35 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'image__parameterized0' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized1' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
 	Parameter WIDTH bound to: 640 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
-	Parameter IMG_FILE bound to: backgroundImage.mem - type: string 
-	Parameter CLR_FILE bound to: backgroundColors.mem - type: string 
+	Parameter IMG_FILE bound to: bird_image.mem - type: string 
+	Parameter CLR_FILE bound to: bird_colors.mem - type: string 
 	Parameter FILES_PATH bound to: (null) - type: string 
 	Parameter PIXEL_COUNT bound to: 307200 - type: integer 
 	Parameter PIXEL_ADDRESS_WIDTH bound to: 20 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized1' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized3' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 20 - type: integer 
 	Parameter DEPTH bound to: 307200 - type: integer 
-	Parameter MEMFILE bound to: 160'b0000000001100010011000010110001101101011011001110111001001101111011101010110111001100100010010010110110101100001011001110110010100101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'backgroundImage.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized1' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+	Parameter MEMFILE bound to: 120'b000000000110001001101001011100100110010001011111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'bird_image.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized3' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
 WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized2' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized4' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
 	Parameter DEPTH bound to: 256 - type: integer 
-	Parameter MEMFILE bound to: 168'b000000000110001001100001011000110110101101100111011100100110111101110101011011100110010001000011011011110110110001101111011100100111001100101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'backgroundColors.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized2' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+	Parameter MEMFILE bound to: 128'b00000000011000100110100101110010011001000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'bird_colors.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized4' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'image__parameterized0' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized1' (59#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'BirdDisplay' (60#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v:1]
 INFO: [Synth 8-6157] synthesizing module 'PipeDisplay' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:1]
 	Parameter SCREEN_WIDTH bound to: 640 - type: integer 
 	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
-	Parameter PIPE_WIDTH bound to: 70 - type: integer 
+	Parameter PIPE_WIDTH bound to: 59 - type: integer 
 	Parameter PIPE_CAP_HEIGHT bound to: 10 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'pipe_reg_parser' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/RegisterParsers/pipe_register_parser.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'pipe_reg_parser' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/CPU/RegisterParsers/pipe_register_parser.v:1]
-INFO: [Synth 8-6157] synthesizing module 'image__parameterized1' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
-	Parameter WIDTH bound to: 70 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized2' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+	Parameter WIDTH bound to: 59 - type: integer 
 	Parameter HEIGHT bound to: 640 - type: integer 
 	Parameter IMG_FILE bound to: pipe_shaft_image.mem - type: string 
 	Parameter CLR_FILE bound to: pipe_shaft_colors.mem - type: string 
 	Parameter FILES_PATH bound to: (null) - type: string 
-	Parameter PIXEL_COUNT bound to: 44800 - type: integer 
+	Parameter PIXEL_COUNT bound to: 37760 - type: integer 
 	Parameter PIXEL_ADDRESS_WIDTH bound to: 17 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized3' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized5' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 17 - type: integer 
-	Parameter DEPTH bound to: 44800 - type: integer 
+	Parameter DEPTH bound to: 37760 - type: integer 
 	Parameter MEMFILE bound to: 168'b000000000111000001101001011100000110010101011111011100110110100001100001011001100111010001011111011010010110110101100001011001110110010100101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'pipe_shaft_image.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized3' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-3876] $readmem data file 'pipe_shaft_image.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized5' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
 WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized4' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized6' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
 	Parameter DEPTH bound to: 256 - type: integer 
 	Parameter MEMFILE bound to: 176'b00000000011100000110100101110000011001010101111101110011011010000110000101100110011101000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'pipe_shaft_colors.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized4' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-3876] $readmem data file 'pipe_shaft_colors.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized6' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'image__parameterized1' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
-INFO: [Synth 8-6157] synthesizing module 'image__parameterized2' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
-	Parameter WIDTH bound to: 70 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized2' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized3' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+	Parameter WIDTH bound to: 59 - type: integer 
 	Parameter HEIGHT bound to: 640 - type: integer 
 	Parameter IMG_FILE bound to: pipe_cap_image.mem - type: string 
 	Parameter CLR_FILE bound to: pipe_cap_colors.mem - type: string 
 	Parameter FILES_PATH bound to: (null) - type: string 
-	Parameter PIXEL_COUNT bound to: 44800 - type: integer 
+	Parameter PIXEL_COUNT bound to: 37760 - type: integer 
 	Parameter PIXEL_ADDRESS_WIDTH bound to: 17 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized5' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized7' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 17 - type: integer 
-	Parameter DEPTH bound to: 44800 - type: integer 
+	Parameter DEPTH bound to: 37760 - type: integer 
 	Parameter MEMFILE bound to: 152'b00000000011100000110100101110000011001010101111101100011011000010111000001011111011010010110110101100001011001110110010100101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'pipe_cap_image.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized5' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-3876] $readmem data file 'pipe_cap_image.mem' is read successfully [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized7' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
 WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized6' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
-	Parameter DATA_WIDTH bound to: 12 - type: integer 
-	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
-	Parameter DEPTH bound to: 256 - type: integer 
-	Parameter MEMFILE bound to: 160'b0000000001110000011010010111000001100101010111110110001101100001011100000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'pipe_cap_colors.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized6' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'image__parameterized2' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized3' (61#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'PipeDisplay' (62#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'VGAController' (63#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'Main' (64#1) [C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Main.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1102.926 ; gain = 102.184
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1102.926 ; gain = 102.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1102.926 ; gain = 102.184
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.371 . Memory (MB): peak = 1102.926 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.234 . Memory (MB): peak = 1351.801 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -416,31 +434,30 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1256.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1351.801 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1256.855 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1351.801 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1351.801 ; gain = 352.156
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'vga_controller/background' (image) to 'vga_controller/splash'
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -448,8 +465,8 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   65 Bit       Adders := 5     
 	   3 Input   64 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 5     
 	   3 Input   32 Bit       Adders := 14    
+	   2 Input   32 Bit       Adders := 5     
 	   4 Input   32 Bit       Adders := 8     
 	   2 Input   10 Bit       Adders := 10    
 	   3 Input    9 Bit       Adders := 4     
@@ -462,20 +479,23 @@ Detailed RTL Component Info :
 +---Registers : 
 	               65 Bit    Registers := 3     
 	               64 Bit    Registers := 3     
-	               32 Bit    Registers := 4     
-	               12 Bit    Registers := 10    
+	               32 Bit    Registers := 3     
+	               21 Bit    Registers := 1     
+	               12 Bit    Registers := 11    
 	               10 Bit    Registers := 2     
-	                9 Bit    Registers := 10    
+	                9 Bit    Registers := 11    
 	                6 Bit    Registers := 2     
 	                1 Bit    Registers := 1514  
 +---Multipliers : 
 	              32x32  Multipliers := 1     
 	              10x32  Multipliers := 9     
 +---RAMs : 
-	            2700K Bit	(307200 X 9 bit)          RAMs := 2     
-	             393K Bit	(44800 X 9 bit)          RAMs := 8     
+	            2700K Bit	(307200 X 9 bit)          RAMs := 3     
+	             331K Bit	(37760 X 9 bit)          RAMs := 8     
 	             128K Bit	(4096 X 32 bit)          RAMs := 1     
-	               3K Bit	(256 X 12 bit)          RAMs := 10    
+	               3K Bit	(256 X 12 bit)          RAMs := 11    
++---ROMs : 
+	                    ROMs := 1     
 +---Muxes : 
 	   2 Input   65 Bit        Muxes := 4     
 	   3 Input   65 Bit        Muxes := 1     
@@ -513,20 +533,6 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP multdiv/mult/real_prod0, operation Mode is: A*B.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
-DSP Report: Generating DSP multdiv/mult/real_prod_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register multdiv/mult/real_prod_reg is absorbed into DSP multdiv/mult/real_prod_reg.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
-DSP Report: Generating DSP multdiv/mult/real_prod0, operation Mode is: A*B.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
-DSP Report: Generating DSP multdiv/mult/real_prod_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register multdiv/mult/real_prod_reg is absorbed into DSP multdiv/mult/real_prod_reg.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
-DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
 DSP Report: Generating DSP imgAddress1, operation Mode is: A*(B:0x280).
 DSP Report: operator imgAddress1 is absorbed into DSP imgAddress1.
 DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffffa6).
@@ -540,10 +546,10 @@ DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: Generating DSP p_0_in, operation Mode is: A*(B:0x280).
 DSP Report: operator p_0_in is absorbed into DSP p_0_in.
-DSP Report: Generating DSP O1490, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
-DSP Report: operator O1490 is absorbed into DSP O1490.
-DSP Report: Generating DSP O1490, operation Mode is: PCIN+(A:0x0):B.
-DSP Report: operator O1490 is absorbed into DSP O1490.
+DSP Report: Generating DSP O30, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
+DSP Report: operator O30 is absorbed into DSP O30.
+DSP Report: Generating DSP O30, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator O30 is absorbed into DSP O30.
 DSP Report: Generating DSP p_1_in, operation Mode is: ((D or 0)+(0 or A))*(B:0x280).
 DSP Report: operator imgAddress2 is absorbed into DSP p_1_in.
 DSP Report: operator imgAddress2 is absorbed into DSP p_1_in.
@@ -553,10 +559,10 @@ DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: Generating DSP p_0_in, operation Mode is: A*(B:0x280).
 DSP Report: operator p_0_in is absorbed into DSP p_0_in.
-DSP Report: Generating DSP O1500, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
-DSP Report: operator O1500 is absorbed into DSP O1500.
-DSP Report: Generating DSP O1500, operation Mode is: PCIN+(A:0x0):B.
-DSP Report: operator O1500 is absorbed into DSP O1500.
+DSP Report: Generating DSP O40, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
+DSP Report: operator O40 is absorbed into DSP O40.
+DSP Report: Generating DSP O40, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator O40 is absorbed into DSP O40.
 DSP Report: Generating DSP p_1_in, operation Mode is: ((D or 0)+(0 or A))*(B:0x280).
 DSP Report: operator imgAddress2 is absorbed into DSP p_1_in.
 DSP Report: operator imgAddress2 is absorbed into DSP p_1_in.
@@ -566,10 +572,10 @@ DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: Generating DSP p_0_in, operation Mode is: A*(B:0x280).
 DSP Report: operator p_0_in is absorbed into DSP p_0_in.
-DSP Report: Generating DSP O1510, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
-DSP Report: operator O1510 is absorbed into DSP O1510.
-DSP Report: Generating DSP O1510, operation Mode is: PCIN+(A:0x0):B.
-DSP Report: operator O1510 is absorbed into DSP O1510.
+DSP Report: Generating DSP O50, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
+DSP Report: operator O50 is absorbed into DSP O50.
+DSP Report: Generating DSP O50, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator O50 is absorbed into DSP O50.
 DSP Report: Generating DSP p_1_in, operation Mode is: ((D or 0)+(0 or A))*(B:0x280).
 DSP Report: operator imgAddress2 is absorbed into DSP p_1_in.
 DSP Report: operator imgAddress2 is absorbed into DSP p_1_in.
@@ -579,44 +585,48 @@ DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: Generating DSP p_0_in, operation Mode is: A*(B:0x280).
 DSP Report: operator p_0_in is absorbed into DSP p_0_in.
-DSP Report: Generating DSP O1520, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
-DSP Report: operator O1520 is absorbed into DSP O1520.
-DSP Report: Generating DSP O1520, operation Mode is: PCIN+(A:0x0):B.
-DSP Report: operator O1520 is absorbed into DSP O1520.
+DSP Report: Generating DSP O60, operation Mode is: PCIN+(A:0x0):B+(C:0x1).
+DSP Report: operator O60 is absorbed into DSP O60.
+DSP Report: Generating DSP O60, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator O60 is absorbed into DSP O60.
 DSP Report: Generating DSP imgAddress0, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: operator imgAddress1 is absorbed into DSP imgAddress0.
-warning: Removed RAM birdDisplay/birdImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM birdDisplay/birdImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe1Display/pipeImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe1Display/pipeImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe1Display/pipeCapImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe1Display/pipeCapImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe2Display/pipeImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe2Display/pipeImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe2Display/pipeCapImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe2Display/pipeCapImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe3Display/pipeImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe3Display/pipeImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe3Display/pipeCapImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe3Display/pipeCapImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe4Display/pipeImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe4Display/pipeImage/ColorPalette/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe4Display/pipeCapImage/ImageData/MemoryArray_reg due to inactive write enable
-warning: Removed RAM pipe4Display/pipeCapImage/ColorPalette/MemoryArray_reg due to inactive write enable
+DSP Report: Generating DSP multdiv/mult/real_prod0, operation Mode is: A*B.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
+DSP Report: Generating DSP multdiv/mult/real_prod_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register multdiv/mult/real_prod_reg is absorbed into DSP multdiv/mult/real_prod_reg.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
+DSP Report: Generating DSP multdiv/mult/real_prod0, operation Mode is: A*B.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod0.
+DSP Report: Generating DSP multdiv/mult/real_prod_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register multdiv/mult/real_prod_reg is absorbed into DSP multdiv/mult/real_prod_reg.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
+DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
+ROM: Preliminary Mapping	Report
++------------+-------------------------+---------------+----------------+
+|Module Name | RTL Object              | Depth x Width | Implemented As | 
++------------+-------------------------+---------------+----------------+
+|Main        | CPU/InstMem/dataOut_reg | 4096x21       | Block RAM      | 
++------------+-------------------------+---------------+----------------+
+
+
 Block RAM: Preliminary Mapping	Report (see note below)
 +-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name              | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|IMG_RAM:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
-|IMG_RAM__parameterized0: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|IMG_RAM__parameterized1: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|IMG_RAM__parameterized2: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
 +-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -625,10 +635,6 @@ DSP: Preliminary Mapping	Report (see note below)
 +--------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name   | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +--------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|multdiv_stage | A*B                               | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multdiv_stage | (PCIN>>17)+A*B                    | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|multdiv_stage | A*B                               | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multdiv_stage | (PCIN>>17)+A*B                    | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
 |BirdDisplay   | A*(B:0x280)                       | 19     | 10     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |BirdDisplay   | PCIN+(A:0x0):B+(C:0xffffffffffa6) | 30     | 10     | 8      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |PipeDisplay   | ((D or 0)+(0 or A))*(B:0x280)     | 9      | 10     | -      | 16     | 16     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
@@ -656,6 +662,10 @@ DSP: Preliminary Mapping	Report (see note below)
 |PipeDisplay   | PCIN+(A:0x0):B+(C:0x1)            | 30     | 16     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 |PipeDisplay   | PCIN+(A:0x0):B                    | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |VGAController | C+(A:0x280)*B                     | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multdiv_stage | A*B                               | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multdiv_stage | (PCIN>>17)+A*B                    | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multdiv_stage | A*B                               | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multdiv_stage | (PCIN>>17)+A*B                    | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
 +--------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -666,13 +676,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -682,8 +692,8 @@ Block RAM: Final Mapping	Report
 +-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name              | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|IMG_RAM:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
-|IMG_RAM__parameterized0: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|IMG_RAM__parameterized1: | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|IMG_RAM__parameterized2: | MemoryArray_reg | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
 +-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -692,49 +702,49 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance splash/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -752,37 +762,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -810,31 +820,30 @@ Report Cell Usage:
 |10    |MUXF7    |     8|
 |11    |RAMB18E1 |     1|
 |12    |RAMB36E1 |    80|
-|29    |FDRE     |    89|
-|30    |IBUF     |     1|
-|31    |OBUF     |    14|
+|25    |FDRE     |    89|
+|26    |IBUF     |     1|
+|27    |OBUF     |    14|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1256.855 ; gain = 102.184
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1256.855 ; gain = 256.113
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 1485.758 ; gain = 486.113
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1485.758 ; gain = 486.113
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1256.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1485.758 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 116 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1256.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1485.758 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-208 Infos, 92 Warnings, 6 Critical Warnings and 0 Errors encountered.
+218 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 1256.855 ; gain = 256.113
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1485.758 ; gain = 486.113
 INFO: [Common 17-1381] The checkpoint 'C:/Users/dpk14/SchoolProjects/ECE350/FlappyBird/ECE350FinalProject/Vivado/FlappyBird.runs/synth_1/Main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 23 19:02:53 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 24 14:40:00 2021...

@@ -87,7 +87,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v">
+      <File Path="$PPRDIR/../Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -516,6 +516,14 @@
       </File>
       <File Path="$PPRDIR/../Main.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

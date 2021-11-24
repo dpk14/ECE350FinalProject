@@ -26,8 +26,8 @@ module BirdDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480,
 
     // bird
     image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
-            .IMG_FILE("backgroundImage.mem"),
-            .CLR_FILE("backgroundColors.mem"))
+            .IMG_FILE("bird_image.mem"),
+            .CLR_FILE("bird_colors.mem"))
     birdImage(.clk(clk),
                 .imgAddress(x - BIRD_LEFT_EDGE + 640*(y - bird_top_edge)),
                 .colorData(colorData));
@@ -35,6 +35,6 @@ module BirdDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480,
     assign inside_bird = y >= bird_top_edge &&
                          y <= bird_top_edge + BIRD_HEIGHT &&
                          x >= BIRD_LEFT_EDGE &&
-                         x >= BIRD_LEFT_EDGE + BIRD_WIDTH;
+                         x <= BIRD_LEFT_EDGE + BIRD_WIDTH;
 
 endmodule

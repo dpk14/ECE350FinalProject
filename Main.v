@@ -14,6 +14,7 @@ module Main(input clk,
 
     localparam MHz = 1000000;
     localparam SYSTEM_FREQ = 100*MHz; // System clock frequency
+    localparam PROC_FREQ = 50*MHz;
 
     localparam GAME_FRAME_RT = 64'd60; // 60 fps
 
@@ -22,7 +23,7 @@ module Main(input clk,
     clock_divider frame_rate_clock_divider(.divclk(frame_rate_clk), .divclkfreq(GAME_FRAME_RT),
                                            .sysclk(clk), .sysclkfreq(SYSTEM_FREQ));
 
-    clock_divider processor_clock_divider(.divclk(processor_clk), .divclkfreq(SYSTEM_FREQ / 2),
+    clock_divider processor_clock_divider(.divclk(processor_clk), .divclkfreq(PROC_FREQ),
                                            .sysclk(clk), .sysclkfreq(SYSTEM_FREQ));
 
     wire [31:0] interrupt_instruction;
@@ -54,32 +55,5 @@ module Main(input clk,
                                  .ps2_clk(ps2_clk), .ps2_data(ps2_data),
 
                                 .clk(clk), .reset(1'b0), .jump(jump));
-
-
-//	input clk, 			// 100 MHz System Clock
-//	input reset, 		// Reset Signal
-//
-//	// Game inputs
-//
-//	input jump,
-//
-//	// Register Contents
-//
-//	input[31:0] pipe1,
-//	input[31:0] pipe2,
-//    input[31:0] pipe3,
-//    input[31:0] pipe4,
-//
-//    input[31:0] bird_top_left,
-//    input[31:0] current_score,
-//    input[31:0] high_score,
-//
-//	output hSync, 		// H Sync Signal
-//	output vSync, 		// Veritcal Sync Signal
-//	output[3:0] VGA_R,  // Red Signal Bits
-//	output[3:0] VGA_G,  // Green Signal Bits
-//	output[3:0] VGA_B,  // Blue Signal Bits
-//	inout ps2_clk,
-//	inout ps2_data);
 
 endmodule

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1637712180">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1637782855">
   <File Type="BITSTR-BMM" Name="Main_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Main_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Main_timing_summary_init.rpt"/>
@@ -91,7 +91,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v">
+    <File Path="$PPRDIR/../Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -520,6 +520,14 @@
     </File>
     <File Path="$PPRDIR/../Main.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Controller/IOController/OutputControllers/VGAController/MemoryFiles/IMG_RAM.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

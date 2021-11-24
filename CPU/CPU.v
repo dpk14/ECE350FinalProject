@@ -32,18 +32,24 @@ module CPU (clock, reset,
             // Read-Only Registers
             reg_out0, reg_out1, reg_out2, reg_out3, reg_out4, reg_out5, reg_out6, reg_out7, reg_out8, reg_out9, reg_out10,
             reg_out11, reg_out12, reg_out13, reg_out14, reg_out15, reg_out16, reg_out17, reg_out18, reg_out19, reg_out20,
-            reg_out21, reg_out22, reg_out23, reg_out24, reg_out25, reg_out26, reg_out27, reg_out28, reg_out29, reg_out30, reg_out31
+            reg_out21, reg_out22, reg_out23, reg_out24, reg_out25, reg_out26, reg_out27, reg_out28, reg_out29, reg_out30, reg_out31,
+
+            rData, regA,
+            rd, rs1, rwe
             );
 
 	input clock, reset;
 	input [31:0] interrupt_instruction;
 
-
 	output [31:0] reg_out0, reg_out1, reg_out2, reg_out3, reg_out4, reg_out5, reg_out6, reg_out7, reg_out8, reg_out9, reg_out10,
     	reg_out11, reg_out12, reg_out13, reg_out14, reg_out15, reg_out16, reg_out17, reg_out18, reg_out19, reg_out20,
     	reg_out21, reg_out22, reg_out23, reg_out24, reg_out25, reg_out26, reg_out27, reg_out28, reg_out29, reg_out30, reg_out31;
 
-	wire rwe, mwe;
+    output[31:0] rData, regA;
+    output[4:0] rd, rs1;
+    output rwe;
+
+	wire mwe;
 	wire[4:0] rd, rs1, rs2;
 	wire[31:0] instAddr, instData,
 		rData, regA, regB,
@@ -83,7 +89,16 @@ module CPU (clock, reset,
 		.ctrl_writeEnable(rwe), .ctrl_reset(reset),
 		.ctrl_writeReg(rd),
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2),
-		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB));
+		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB),
+
+        .reg_out0(reg_out0), .reg_out1(reg_out1), .reg_out2(reg_out2), .reg_out3(reg_out3), .reg_out4(reg_out4),
+        .reg_out5(reg_out5), .reg_out6(reg_out6), .reg_out7(reg_out7), .reg_out8(reg_out8), .reg_out9(reg_out9),
+        .reg_out10(reg_out10), .reg_out11(reg_out11), .reg_out12(reg_out12), .reg_out13(reg_out13), .reg_out14(reg_out14),
+        .reg_out15(reg_out15), .reg_out16(reg_out16), .reg_out17(reg_out17), .reg_out18(reg_out18), .reg_out19(reg_out19),
+        .reg_out20(reg_out20), .reg_out21(reg_out21), .reg_out22(reg_out22), .reg_out23(reg_out23), .reg_out24(reg_out24),
+        .reg_out25(reg_out25), .reg_out26(reg_out26), .reg_out27(reg_out27), .reg_out28(reg_out28), .reg_out29(reg_out29),
+        .reg_out30(reg_out30), .reg_out31(reg_out31)
+		);
 
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(clock),
