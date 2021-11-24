@@ -1,14 +1,15 @@
 module image #( parameter WIDTH = 640, HEIGHT = 480,
-                          IMG_FILE = "background_image.mem",
-                          CLR_FILE = "background_colors.mem") (
+                          IMG_FILE = "image.mem",
+                          CLR_FILE = "colors.mem") (
     input clk,
-    input [31:0] imgAddress,
+    input [PIXEL_ADDRESS_WIDTH-1:0] imgAddress,
 	output[BITS_PER_COLOR-1:0] colorData // 12-bit color data at current pixel
     );
 
     // Lab Memory Files Location
-    localparam FILES_PATH = "";
+    localparam FILES_PATH = "../../MemoryFiles/";
 
+    wire[PIXEL_ADDRESS_WIDTH-1:0] imgAddress;  	 // Image address for the image data
     wire[PALETTE_ADDRESS_WIDTH-1:0] colorAddr; 	 // Color address for the color palette
 
     localparam
@@ -18,19 +19,19 @@ module image #( parameter WIDTH = 640, HEIGHT = 480,
         PALETTE_COLOR_COUNT = 256, 								 // Number of Colors available
         PALETTE_ADDRESS_WIDTH = $clog2(PALETTE_COLOR_COUNT) + 1; // Use built in log2 Command
 
-	IMG_RAM #(
+	RAM #(
 		.DEPTH(PIXEL_COUNT), 				     // Set RAM depth to contain every pixel
 		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
 		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
 		.MEMFILE({FILES_PATH, IMG_FILE})) // Memory initialization
 	ImageData(
 		.clk(clk), 						 // Falling edge of the 100 MHz clk
-		.addr(imgAddress[PIXEL_ADDRESS_WIDTH-1:0]),					 // Image data address
+		.addr(imgAddress),					 // Image data address
 		.dataOut(colorAddr),				 // Color palette address
 		.wEn(1'b0)); 						 // We're always reading
 
 
-	IMG_RAM #(
+	RAM #(
 		.DEPTH(PALETTE_COLOR_COUNT), 		       // Set depth to contain every color
 		.DATA_WIDTH(BITS_PER_COLOR), 		       // Set data width according to the bits per color
 		.ADDRESS_WIDTH(PALETTE_ADDRESS_WIDTH),     // Set address width according to the color count

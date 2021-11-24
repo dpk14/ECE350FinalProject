@@ -1,6 +1,6 @@
 module GameLogicController(registers, frame_rt_clk);
 
-    input frame_rt_clk, registers;
+    input frame_rt_clk;
 
     // reads from different registers at frame rate, compares contents
 
