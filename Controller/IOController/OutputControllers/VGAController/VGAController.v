@@ -42,9 +42,6 @@ module VGAController(
 		SCREEN_HEIGHT = 480, // Standard VGA Height
 		BITS_PER_COLOR = 12, // Nexys A7 uses 12 bits/color
 
-        PIPE_WIDTH = 70,
-        PIPE_CAP_HEIGHT = 10,
-
 		BIRD_WIDTH = 35,
 		BIRD_HEIGHT = 35,
 		BIRD_LEFT_EDGE = 90;
@@ -90,7 +87,7 @@ module VGAController(
         image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
                 .IMG_FILE("background_image.mem"),
                 .CLR_FILE("background_colors.mem"))
-        splash(.clk(clk),
+        background(.clk(clk),
                     .imgAddress(x + 640*y),
                     .colorData(splashScreenColorData));
 
@@ -103,19 +100,19 @@ module VGAController(
 
         // display for each of pipes
 
-        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe1Display(.inside_pipe(inside_pipe1), .colorData(pipe1_colorData),
                                     .clk(clk), .x(x), .y(y), .pipe_reg(pipe1));
-        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe2Display(.inside_pipe(inside_pipe2), .colorData(pipe2_colorData),
                                 .clk(clk), .x(x), .y(y), .pipe_reg(pipe2));
-        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe3Display(.inside_pipe(inside_pipe3), .colorData(pipe3_colorData),
                                 .clk(clk), .x(x), .y(y), .pipe_reg(pipe3));
-        PipeDisplay#(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+        PipeDisplay#(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR),
                      .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe4Display(.inside_pipe(inside_pipe4), .colorData(pipe4_colorData),
                                 .clk(clk), .x(x), .y(y), .pipe_reg(pipe4));
