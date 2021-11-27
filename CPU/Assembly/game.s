@@ -20,11 +20,11 @@ lw $r27, 1000($r0) #find high score
 game_loop:
 #check if button pressed
 jal check_collision #check if collision occurred
-bne $r29, $r0, 1 #check if flappy should jump
-bne $r28, $r0, 1 #check if frame should be updated
+bne $r29, $r0, 2 #check if flappy should jump
+bne $r28, $r0, 2 #check if frame should be updated
+j game_loop
 j button_pressed
 j move_pipes #check if need to update screen 
-j game_loop
 
 move_pipes: #update pipe position (may have to tweak addi parameter to see how fast pipe moves)
 addi $r23,$r23,1  #update total count of game frame 
@@ -71,12 +71,9 @@ j game_loop
 end_game: 
 sub $r25, $r25, $r25 #clears game underway register to indicate game is over 
 
-#see if score>high score
-#if >high score store new score in data memory address 
-#clear all registers
+blt $r27, $r26, 1 #see if score>high score
+sw $r26, 1000($r0) #if >high score store new score in data memory address 
 
-blt $r27, $r26, 1
-sw $r26, 1000($r0)
 add $r1, $r0, $r0 #clear rest of regs 
 add $r2, $r0, $r0
 add $r3, $r0, $r0
