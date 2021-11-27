@@ -25,7 +25,7 @@ module BirdDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480,
     wire [8:0] y_gap_center, y_gap_height;
 
     // bird
-    image #(.WIDTH(SCREEN_WIDTH), .HEIGHT(SCREEN_HEIGHT),
+    image #(.WIDTH(BIRD_WIDTH), .HEIGHT(BIRD_HEIGHT),
             .IMG_FILE("bird_image.mem"),
             .CLR_FILE("bird_colors.mem"))
     birdImage(.clk(clk),

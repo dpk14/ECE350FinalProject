@@ -28,7 +28,7 @@ module PipeDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480,
                                    .pipe_space_center_y(y_gap_center), .pipe_space_height(y_gap_height));
 
     // an image of a pipe going from top to bottom. Actual pipe images are cropped from this based on height
-    image #(.WIDTH(PIPE_WIDTH), .HEIGHT(SCREEN_WIDTH),
+    image #(.WIDTH(PIPE_WIDTH), .HEIGHT(SCREEN_HEIGHT),
             .IMG_FILE("pipe_shaft_image.mem"),
             .CLR_FILE("pipe_shaft_colors.mem"))
     pipeImage(.clk(clk),
@@ -38,7 +38,7 @@ module PipeDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480,
                .colorData(pipeColorData));
 
     // an image of the cap of a pipe
-    image #(.WIDTH(PIPE_WIDTH), .HEIGHT(SCREEN_WIDTH),
+    image #(.WIDTH(PIPE_WIDTH), .HEIGHT(PIPE_CAP_HEIGHT),
             .IMG_FILE("pipe_cap_image.mem"),
             .CLR_FILE("pipe_cap_colors.mem"))
     pipeCapImage(.clk(clk),
