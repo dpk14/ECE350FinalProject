@@ -1,12 +1,12 @@
 init: 
 #initialize score 
-#assume bird width to be 20
-#assume bird height to be 10
-#assume pipe width to be 25
+#assume bird width to be 34
+#assume bird height to be 48
+#assume pipe width to be 58
 #keep high score at memory address 0
 
 
-addi $r19, $r0, 130 #bird's (right) x coord (120+10)
+addi $r19, $r0, 94 #bird's (right) x coord (120+10)
 addi $r20, $r0, 325 #bird's y coord (top- 320+5)
 
 addi $r21, $r0, 10 #r21 scores vertical height gained by bird on jump
@@ -19,6 +19,7 @@ lw $r27, 0($r0) #find high score
 
 game_loop:
 #check if button pressed
+addi $r20, $r20,-1
 jal check_collision #check if collision occurred
 bne $r29, $r0, 2 #check if flappy should jump
 bne $r28, $r0, 2 #check if frame should be updated
@@ -30,6 +31,8 @@ move_pipes: #update pipe position (may have to tweak addi parameter to see how f
 addi $r23,$r23,1  #update total count of game frame 
 addi $r26, $r26, 1 #update score
 addi $r1, $r1, -1 #update position of pipe
+bne $r1, $r0, 1 #move pipe back if it reaches end of screen 
+addi $r1, $r0, 582
 bne $r24, $r23, 3 #if equal then we update speed at which pipes move and clear r10
 addi $r22, $r22,1
 sub $r23, $r23, $r23
@@ -37,15 +40,15 @@ sub $r28, $r28, $r28 #clear frame rate register
 j game_loop
 
 check_collision:  #just checking pipe 1 for now 
-addi $r18, $r20, -10 #set $r18 to temporarily be bottom edge of bird
+addi $r18, $r20, -48 #set $r18 to temporarily be bottom edge of bird
 add $r17, $r2, $r3, #set $r17 to temporarily be "height" of top pipe
 blt $r18, $r2,2  #branch if bottom edge of bird is below top edge of pipe 
 blt $r17, $r20, 1  #branch if top edge of bird is above top pipe height
 j clear_temp_pipes #between pipes can jump back as no collision is possible
 add $r0, $r0, $r0 #collision is possible check left, right and midpoint
-addi $r16, $r19, -10 #find midpoint of bird
-addi $r15, $r19, -20 #find left edge of bird
-addi $r14, $r1, 25 #find right edge of pipes
+addi $r16, $r19, -17 #find midpoint of bird
+addi $r15, $r19, -34 #find left edge of bird
+addi $r14, $r1, 58 #find right edge of pipes
 blt $r1, $r19, 3  #check if bird right edge is past left point
 blt $r1, $r16, 3 #check if bird midpt is past left point
 blt $r1, $r15, 3 #check if bird  left edge is past left point
@@ -66,7 +69,7 @@ sub $r13, $r13, $r13
 j game_loop
 
 button_pressed: #may need to introduce procedure to slowly update value of bird's y_coord
-addi $r5, $r5, $r21
+add $r5, $r5, $r21
 sub $r29, $r29, $r29 #clear button register
 j game_loop
 
