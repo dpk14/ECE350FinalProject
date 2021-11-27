@@ -57,7 +57,7 @@ module VGAController(
 
 		BIRD_WIDTH = 47,
 		BIRD_HEIGHT = 33,
-		BIRD_LEFT_EDGE = 90;
+		BIRD_LEFT_EDGE = 60;
 
 	wire active, screenEnd;
 	wire[9:0] x;
