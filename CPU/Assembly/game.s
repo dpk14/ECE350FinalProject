@@ -23,17 +23,17 @@ jal check_collision #check if collision occurred
 bne $r29, $r0, 1 #check if flappy should jump
 bne $r28, $r0, 1 #check if frame should be updated
 j button_pressed
-j move_barriers #check if need to update screen 
+j move_pipes #check if need to update screen 
 j game_loop
 
-move_barriers: #update pipe position (may have to tweak addi parameter to see how fast pipe moves)
+move_pipes: #update pipe position (may have to tweak addi parameter to see how fast pipe moves)
 addi $r23,$r23,1  #update total count of game frame 
 addi $r26, $r26, 1 #update score
+addi $r1, $r1, -1 #update position of pipe
 bne $r24, $r23, 3 #if equal then we update speed at which pipes move and clear r10
 addi $r22, $r22,1
 sub $r23, $r23, $r23
 sub $r28, $r28, $r28 #clear frame rate register
-addi $r26, $r26,1
 j game_loop
 
 check_collision:  #just checking pipe 1 for now 
@@ -65,7 +65,7 @@ j end_game
 button_pressed: #may need to introduce procedure to slowly update value of bird's y_coord
 addi $r5, $r5, $r21
 sub $r29, $r29, $r29 #clear button register
-jr $ra
+j game_loop
 
 #if collsion occurs end game 
 end_game: 
