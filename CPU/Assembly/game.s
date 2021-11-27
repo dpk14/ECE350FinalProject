@@ -41,7 +41,7 @@ addi $r18, $r20, -10 #set $r18 to temporarily be bottom edge of bird
 add $r17, $r2, $r3, #set $r17 to temporarily be "height" of top pipe
 blt $r18, $r2,2  #branch if bottom edge of bird is below top edge of pipe 
 blt $r17, $r20, 1  #branch if top edge of bird is above top pipe height
-j game_loop #between pipes can jump back as no collision is possible
+j clear_temp_pipes #between pipes can jump back as no collision is possible
 add $r0, $r0, $r0 #collision is possible check left, right and midpoint
 addi $r16, $r19, -10 #find midpoint of bird
 addi $r15, $r19, -20 #find left edge of bird
@@ -49,17 +49,22 @@ addi $r14, $r1, 25 #find right edge of pipes
 blt $r1, $r19, 3  #check if bird right edge is past left point
 blt $r1, $r16, 3 #check if bird midpt is past left point
 blt $r1, $r15, 3 #check if bird  left edge is past left point
-j game_loop #if none of above conditions met jump back to game loop
-blt  $r19, $r14, 8  #check if bird right edge is before pipe right point
-blt  $r16, $r14, 7 #check if bird right edge is before pipe right point
-blt  $r15, $r14, 6 #check if bird right edge is before pipe right point
+j clear_temp_pipes #if none of above conditions met jump back to game loop
+blt  $r19, $r14, 3  #check if bird right edge is before pipe right point
+blt  $r16, $r14, 2 #check if bird right edge is before pipe right point
+blt  $r15, $r14, 1 #check if bird right edge is before pipe right point
+j clear_temp_pipes
+j end_game
+
+clear_temp_pipes:
 sub $r18, $r18, $r18 #clear temp registers
 sub $r17, $r17, $r17
 sub $r16, $r16, $r16
 sub $r15, $r15, $r15
 sub $r14, $r14, $r14
+sub $r13, $r13, $r13 
 j game_loop
-j end_game
+
 
 
 button_pressed: #may need to introduce procedure to slowly update value of bird's y_coord
