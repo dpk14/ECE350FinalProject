@@ -1,6 +1,6 @@
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Main.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Main_tb.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\BuildingBlocks\clock_divider.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\BuildingBlocks\IMG_RAM.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\GameLogicController.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputController.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputControllerTB.v
@@ -10,6 +10,7 @@ C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IO
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\BirdDisplay.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\Image.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\PipeDisplay.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\MemoryFiles\IMG_RAM.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\CPU.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\CPU_tb.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\BuildingBlocks\barrel_left_shifter.v
