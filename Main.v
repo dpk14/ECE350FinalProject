@@ -30,7 +30,7 @@ module Main(input clk,
 
     // Read-Only Registers
     wire [31:0] pipe1x, pipe2x, pipe3x, pipe4x,
-                pipe1ycenter, pipe2ycenter, pipe3ycenter, pipe4ycenter,
+                pipe1bottomtop, pipe2bottomtop, pipe3bottomtop, pipe4bottomtop,
                 pipe1yspace, pipe2yspace, pipe3yspace, pipe4yspace,
                 bird_top_left,
                 current_score, high_score;
@@ -38,10 +38,10 @@ module Main(input clk,
     CPU CPU(.clock(processor_clk), .reset(1'b0),
             .interrupt_instruction(interrupt_instruction),
 
-            .reg_out1(pipe1x), .reg_out2(pipe1ycenter), .reg_out3(pipe1yspace),
-            .reg_out4(pipe2x), .reg_out5(pipe2ycenter), .reg_out6(pipe2yspace),
-            .reg_out7(pipe3x), .reg_out8(pipe3ycenter), .reg_out9(pipe3yspace),
-            .reg_out10(pipe4x), .reg_out11(pipe4ycenter), .reg_out12(pipe4yspace),
+            .reg_out1(pipe1x), .reg_out2(pipe1bottomtop), .reg_out3(pipe1yspace),
+            .reg_out4(pipe2x), .reg_out5(pipe2bottomtop), .reg_out6(pipe2yspace),
+            .reg_out7(pipe3x), .reg_out8(pipe3bottomtop), .reg_out9(pipe3yspace),
+            .reg_out10(pipe4x), .reg_out11(pipe4bottomtop), .reg_out12(pipe4yspace),
 
             .reg_out13(bird_top_left),
 
@@ -53,7 +53,7 @@ module Main(input clk,
                                     .reset(1'b0));
 
     VGAController vga_controller(.pipe1x(pipe1x), .pipe2x(pipe2x), .pipe3x(pipe3x), .pipe4x(pipe4x),
-                                 .pipe1ycenter(pipe1ycenter), .pipe2ycenter(pipe2ycenter), .pipe3ycenter(pipe3ycenter), .pipe4ycenter(pipe4ycenter),
+                                 .pipe1bottomtop(pipe1bottomtop), .pipe2bottomtop(pipe2bottomtop), .pipe3bottomtop(pipe3bottomtop), .pipe4bottomtop(pipe4bottomtop),
                                  .pipe1yspace(pipe1yspace), .pipe2yspace(pipe2yspace), .pipe3yspace(pipe3yspace), .pipe4yspace(pipe4yspace),
 
                                  .bird_top_left(bird_top_left),

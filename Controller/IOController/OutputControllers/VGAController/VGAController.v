@@ -14,10 +14,10 @@ module VGAController(
     input[31:0] pipe3x,
     input[31:0] pipe4x,
 
-    input[31:0] pipe1ycenter,
-    input[31:0] pipe2ycenter,
-    input[31:0] pipe3ycenter,
-    input[31:0] pipe4ycenter,
+    input[31:0] pipe1bottomtop,
+    input[31:0] pipe2bottomtop,
+    input[31:0] pipe3bottomtop,
+    input[31:0] pipe4bottomtop,
 
     input[31:0] pipe1yspace,
     input[31:0] pipe2yspace,
@@ -117,27 +117,27 @@ module VGAController(
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe1Display(.inside_pipe(inside_pipe1), .colorData(pipe1_colorData),
                          .clk(clk), .x(x), .y(y),
-                         .x_left_edge(pipe1x), .y_bottom_pipe_top(pipe1ycenter), .y_gap_height(pipe1yspace));
+                         .x_left_edge(pipe1x), .y_bottom_pipe_top(pipe1bottomtop), .y_gap_height(pipe1yspace));
         PipeDisplay #(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe2Display(.inside_pipe(inside_pipe2), .colorData(pipe2_colorData),
                          .clk(clk), .x(x), .y(y),
-                         .x_left_edge(pipe2x), .y_bottom_pipe_top(pipe2ycenter), .y_gap_height(pipe2yspace));
+                         .x_left_edge(pipe2x), .y_bottom_pipe_top(pipe2bottomtop), .y_gap_height(pipe2yspace));
         PipeDisplay #(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe3Display(.inside_pipe(inside_pipe3), .colorData(pipe3_colorData),
                          .clk(clk), .x(x), .y(y),
-                         .x_left_edge(pipe3x), .y_bottom_pipe_top(pipe3ycenter), .y_gap_height(pipe3yspace));
+                         .x_left_edge(pipe3x), .y_bottom_pipe_top(pipe3bottomtop), .y_gap_height(pipe3yspace));
         PipeDisplay#(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                      .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe4Display(.inside_pipe(inside_pipe4), .colorData(pipe4_colorData),
                          .clk(clk), .x(x), .y(y),
-                         .x_left_edge(pipe4x), .y_bottom_pipe_top(pipe4ycenter), .y_gap_height(pipe4yspace));
+                         .x_left_edge(pipe4x), .y_bottom_pipe_top(pipe4bottomtop), .y_gap_height(pipe4yspace));
 
 
 	// Quickly assign the output colors to their channels using concatenation
 
-	wire game_underway = pipe1ycenter != 32'b0 || pipe2ycenter != 32'b0 || pipe3ycenter != 32'b0 || pipe4ycenter != 32'b0 ||
+	wire game_underway = pipe1bottomtop != 32'b0 || pipe2bottomtop != 32'b0 || pipe3bottomtop != 32'b0 || pipe4bottomtop != 32'b0 ||
 	                     pipe1yspace != 32'b0 || pipe2yspace != 32'b0 || pipe3yspace != 32'b0 || pipe4yspace != 32'b0 ||
 	                     pipe1x != 32'b0 || pipe2x != 32'b0 || pipe3x != 32'b0 || pipe4x != 32'b0 ||
                          bird_top_left != 32'b0 || current_score != 32'b0;
