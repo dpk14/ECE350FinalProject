@@ -21,12 +21,12 @@ module FlappyBirdAudio(
 		$readmemh("FREQs.mem", FREQs);
 	end
 
-    reg[10:0] notes[0:31];
+    reg[31:0] notes[0:8];
     initial begin
 		$readmemh("flappy_bird_notes.mem", notes);
 	end
 
-    reg[10:0] note_len[0:31];
+    reg[31:0] note_len[0:8];
     initial begin
 		$readmemh("flappy_bird_note_length.mem", note_len);
 	end
@@ -36,11 +36,10 @@ module FlappyBirdAudio(
 	wire [31:0] CounterLimit; 
 	reg reset; 
 	
-    reg [10:0] note_num=0; 
+    reg [31:0] note_num=0; 
 	assign PICKED_FREQ=FREQs[notes[note_num]];
 	//$display ("Frequency is: %d", PICKED_FREQ); 
 	
-
 	//clock divider from Audio Lab
 	reg clk_note=0;
 	reg [31:0] counter=0;
@@ -58,7 +57,7 @@ module FlappyBirdAudio(
     reg [31:0] counter_note=0;  
     wire [31:0] CounterLimitNote; 
 	//number of cycles to play note for 
-    assign CounterLimitNote=(1/note_len[note_num])*(1/SYSTEM_FREQ); 
+    assign CounterLimitNote=SYSTEM_FREQ/note_len[note_num]
 	//at positive edge check conditions
 	always @(posedge clk) begin
 		if (counter_note<CounterLimitNote)
@@ -67,8 +66,8 @@ module FlappyBirdAudio(
 		else begin
 			counter_note<=0;
 			note_num<=note_num+1;
-		//if out of bounds go back to beginning of track
 		end
+		//if out of bounds go back to beginning of track
 		if (note_num>7)
 			note_num<=0;
 	end
