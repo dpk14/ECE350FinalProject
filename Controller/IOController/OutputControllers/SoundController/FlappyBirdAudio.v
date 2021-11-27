@@ -59,7 +59,7 @@ module FlappyBirdAudio(
     reg [31:0] counter_note=0;  
     wire [31:0] CounterLimitNote; 
 	//number of cycles to play note for 
-    assign CounterLimitNote=SYSTEM_FREQ/8; 
+    assign CounterLimitNote=2*SYSTEM_FREQ; 
 	//at positive edge check conditions
 	always @(posedge clk) begin
 		if (counter_note<CounterLimitNote)

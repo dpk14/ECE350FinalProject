@@ -123,7 +123,6 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
-  set_param xicom.use_bs_reader 1
   open_checkpoint FlappyBirdAudio_routed.dcp
   set_property webtalk.parent_dir {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/SoundController/project_1/project_1.cache/wt} [current_project]
 set_property TOP FlappyBirdAudio [current_fileset]
