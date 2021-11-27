@@ -3,14 +3,14 @@ module PipeDisplay #(parameter SCREEN_HEIGHT = 480,
                               BITS_PER_COLOR = 12)
                    (clk,
                    x, y,
-                   x_left_edge, y_gap_center, y_gap_height,
+                   x_left_edge, y_bottom_pipe_top, y_gap_height,
 
                     // outputs
                     inside_pipe,
                     colorData);
 
     input clk;
-    input[31:0] x_left_edge, y_gap_center, y_gap_height;
+    input[31:0] x_left_edge, y_bottom_pipe_top, y_gap_height;
     input[9:0] x;
     input[8:0] y;
 
@@ -49,12 +49,11 @@ module PipeDisplay #(parameter SCREEN_HEIGHT = 480,
     // what part of the pipe to display
 
     wire [9:0] x_right_edge = x_left_edge + PIPE_WIDTH;
-    wire [8:0] y_bottom_pipe_top = y_gap_center + (y_gap_height / 2);
-    wire [8:0] y_top_pipe_bottom = y_gap_center - (y_gap_height / 2);
+    wire [8:0] y_top_pipe_bottom = y_bottom_pipe_top + y_gap_height;
 
     wire inside_pipe_x = x >= x_left_edge &&
                       x <= x_right_edge &&
-                      y_gap_height != 32'b0 && y_gap_center != 32'b0; // if pipe reg is all 0, means there's no pipe, so can't be inside it
+                      y_gap_height != 32'b0 && y_bottom_pipe_top != 32'b0; // if pipe reg is all 0, means there's no pipe, so can't be inside it
 
     wire inside_top_shaft = inside_pipe_x && y <= y_top_pipe_bottom - PIPE_CAP_HEIGHT;
     wire inside_bottom_shaft = inside_pipe_x && y >= y_bottom_pipe_top + PIPE_CAP_HEIGHT;
