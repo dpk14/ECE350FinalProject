@@ -21,24 +21,26 @@ module FlappyBirdAudio(
 		$readmemh("FREQs.mem", FREQs);
 	end
 
-    reg[31:0] notes[0:8];
+    reg[4:0] notes[0:8];
     initial begin
 		$readmemh("flappy_bird_notes.mem", notes);
 	end
 
-    reg[31:0] note_len[0:8];
-    initial begin
-		$readmemh("flappy_bird_note_length.mem", note_len);
-	end
-
+	//declare wires and registers
 	wire [10:0] PICKED_FREQ; 
 	wire [6:0] duty_cycle; 
 	wire [31:0] CounterLimit; 
+	wire [4:0] selector; 
+	wire [31:0] number; 
+
 	reg reset; 
-	
     reg [31:0] note_num=0; 
-	assign PICKED_FREQ=FREQs[notes[note_num]];
-	//$display ("Frequency is: %d", PICKED_FREQ); 
+
+	//assign values to wires
+    assign number=note_num; 
+    assign selector=notes[number]; 
+	assign PICKED_FREQ=FREQs[selector];
+	
 	
 	//clock divider from Audio Lab
 	reg clk_note=0;
@@ -57,7 +59,7 @@ module FlappyBirdAudio(
     reg [31:0] counter_note=0;  
     wire [31:0] CounterLimitNote; 
 	//number of cycles to play note for 
-    assign CounterLimitNote=SYSTEM_FREQ/note_len[note_num]
+    assign CounterLimitNote=SYSTEM_FREQ/8; 
 	//at positive edge check conditions
 	always @(posedge clk) begin
 		if (counter_note<CounterLimitNote)
@@ -66,10 +68,13 @@ module FlappyBirdAudio(
 		else begin
 			counter_note<=0;
 			note_num<=note_num+1;
+			$display("note num: %d", note_num);
 		end
-		//if out of bounds go back to beginning of track
-		if (note_num>7)
-			note_num<=0;
+	end
+	
+	always @(posedge clk) begin
+	   if (note_num>7)
+	       note_num<=0; 
 	end
 
 	//code from Audio Lab 
@@ -89,7 +94,5 @@ module FlappyBirdAudio(
     //input[6:0] duty_cycle,       // Duty Cycle of the Wave, between 0 and 99
     //output reg signal = 0   // Output PWM signal
     //);
-
-	
 
 endmodule

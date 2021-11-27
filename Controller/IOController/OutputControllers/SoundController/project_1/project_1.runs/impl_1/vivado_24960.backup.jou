@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Nov 27 14:07:15 2021
+# Process ID: 24960
+# Current directory: C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/SoundController/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log FlappyBirdAudio.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source FlappyBirdAudio.tcl -notrace
+# Log file: C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/SoundController/project_1/project_1.runs/impl_1/FlappyBirdAudio.vdi
+# Journal file: C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/SoundController/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source FlappyBirdAudio.tcl -notrace
