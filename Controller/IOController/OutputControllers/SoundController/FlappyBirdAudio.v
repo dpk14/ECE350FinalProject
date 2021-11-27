@@ -32,11 +32,13 @@ module FlappyBirdAudio(
 	wire [31:0] CounterLimit; 
 	wire [4:0] selector; 
 	wire [31:0] number; 
+	wire [7:0] song_limit; 
 
 	reg reset; 
     reg [31:0] note_num=0; 
 
 	//assign values to wires
+	assign song_limit=8'd7; 
     assign number=note_num; 
     assign selector=notes[number]; 
 	assign PICKED_FREQ=FREQs[selector];
@@ -55,25 +57,24 @@ module FlappyBirdAudio(
 		end
 	end
 
-    //clock divider for note to play 
-    reg [31:0] counter_note=0;  
-    wire [31:0] CounterLimitNote; 
+    //clock divider to choose which note to play 
+    reg [63:0] counter_note=0;  
+    wire [63:0] CounterLimitNote; 
 	//number of cycles to play note for 
     assign CounterLimitNote=2*SYSTEM_FREQ; 
 	//at positive edge check conditions
 	always @(posedge clk) begin
-		if (counter_note<CounterLimitNote)
+		if (counter_note<SYSTEM_FREQ)
 			counter_note<=counter_note+1;
 		//if enough cycles pass then move to next note 
 		else begin
 			counter_note<=0;
 			note_num<=note_num+1;
-			$display("note num: %d", note_num);
 		end
 	end
 	
 	always @(posedge clk) begin
-	   if (note_num>7)
+	   if (note_num>song_limit)
 	       note_num<=0; 
 	end
 
@@ -81,7 +82,6 @@ module FlappyBirdAudio(
 	assign duty_cycle=clk_note? 10'd75 : 10'd25;
 	PWMSerializer serializer(clk, 1'b0, duty_cycle, audioOut); 
 	
-
 
 	//module PWMSerializer #(
     //parameter 

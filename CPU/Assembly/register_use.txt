@@ -1,0 +1,28 @@
+registers and their uses
+
+$r0: zero register
+$r1: pipe 1 left edge
+$r2: pipe 1 bottom height
+$r3: pipe 1 gap between bottom and top
+.
+.
+.
+$r13: temporary/discretionary
+$r14: temporary/discretionary
+$r15: temporary/discretionary
+$r16: temporary/discretionary
+$r17: temporary/discretionary
+$r18: temporary/discretionary
+$r19: bird right x-coord
+$r20: bird top y_coord
+$r21: vertical height gained by jump (maybe not needed)
+$r22: speed of incoming pipe
+$r23: frames gone through
+$r24: # of frames to go through before updating difficulty
+$r25: game is under way
+$r26: game score
+$r27: high score
+$r28: frame reate update
+$r29: button_pressed
+$r30: exception register
+$r31: return address register

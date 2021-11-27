@@ -3,7 +3,7 @@ init:
 #assume bird width to be 20
 #assume bird height to be 10
 #assume pipe width to be 25
-#keep high score at memory address 1000
+#keep high score at memory address 0
 
 
 addi $r19, $r0, 130 #bird's (right) x coord (120+10)
@@ -15,7 +15,7 @@ addi $r23, $r0,0 #r23 stores how many game rates we've gone through
 addi $r24, $r0, 500 #$r24 stores number of game loops to go through before updating difficulty
 addi $r25, $r0, 1 #set game to be underway
 addi $r26, $r0, 0 #initialize game score to 0
-lw $r27, 1000($r0) #find high score
+lw $r27, 0($r0) #find high score
 
 game_loop:
 #check if button pressed
@@ -65,8 +65,6 @@ sub $r14, $r14, $r14
 sub $r13, $r13, $r13 
 j game_loop
 
-
-
 button_pressed: #may need to introduce procedure to slowly update value of bird's y_coord
 addi $r5, $r5, $r21
 sub $r29, $r29, $r29 #clear button register
@@ -74,10 +72,10 @@ j game_loop
 
 #if collsion occurs end game 
 end_game: 
-sub $r25, $r25, $r25 #clears game underway register to indicate game is over 
-
 blt $r27, $r26, 1 #see if score>high score
-sw $r26, 1000($r0) #if >high score store new score in data memory address 
+sw $r26, 0($r0) #if >high score store new score in data memory address 
+
+sub $r25, $r25, $r25 #clears game underway register to indicate game is over 
 
 add $r1, $r0, $r0 #clear rest of regs 
 add $r2, $r0, $r0
