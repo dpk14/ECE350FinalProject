@@ -21,9 +21,9 @@ game_loop:
 #check if button pressed
 jal check_collision #check if collision occurred
 bne $r29, $r0, 1 #check if flappy should jump
-jal button_pressed
 bne $r28, $r0, 1 #check if frame should be updated
-jal move_barriers #check if need to update screen 
+j button_pressed
+j move_barriers #check if need to update screen 
 j game_loop
 
 move_barriers: #update pipe position (may have to tweak addi parameter to see how fast pipe moves)
@@ -32,15 +32,16 @@ addi $r26, $r26, 1 #update score
 bne $r24, $r23, 3 #if equal then we update speed at which pipes move and clear r10
 addi $r22, $r22,1
 sub $r23, $r23, $r23
-sub $r28, $r28, $r28 #clear frame reate register
-jr $ra
+sub $r28, $r28, $r28 #clear frame rate register
+addi $r26, $r26,1
+j game_loop
 
 check_collision:  #just checking pipe 1 for now 
 addi $r18, $r20, -10 #set $r18 to temporarily be bottom edge of bird
 add $r17, $r2, $r3, #set $r17 to temporarily be "height" of top pipe
 blt $r18, $r2,2  #branch if bottom edge of bird is below top edge of pipe 
 blt $r17, $r20, 1  #branch if top edge of bird is above top pipe height
-jr $ra #between pipes can jump back as no collision is possible
+j game_loop #between pipes can jump back as no collision is possible
 add $r0, $r0, $r0 #collision is possible check left, right and midpoint
 addi $r16, $r19, -10 #find midpoint of bird
 addi $r15, $r19, -20 #find left edge of bird
@@ -48,7 +49,7 @@ addi $r14, $r1, 25 #find right edge of pipes
 blt $r1, $r19, 3  #check if bird right edge is past left point
 blt $r1, $r16, 3 #check if bird midpt is past left point
 blt $r1, $r15, 3 #check if bird  left edge is past left point
-jr $ra 3 #if none of above conditions met jump back to game loop
+j game_loop #if none of above conditions met jump back to game loop
 blt  $r19, $r14, 8  #check if bird right edge is before pipe right point
 blt  $r16, $r14, 7 #check if bird right edge is before pipe right point
 blt  $r15, $r14, 6 #check if bird right edge is before pipe right point
@@ -57,7 +58,7 @@ sub $r17, $r17, $r17
 sub $r16, $r16, $r16
 sub $r15, $r15, $r15
 sub $r14, $r14, $r14
-jr $ra
+j game_loop
 j end_game
 
 
