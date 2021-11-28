@@ -24,7 +24,8 @@ lw $r27, 0($r0) #find high score
 
 
 game_loop:
-bne $r28, $r0, 6 #jump back to game loop if there is no interrupt
+bne $r28, $r0, 1 #branch to move barrier instrutions if interrupt
+j game_loop
 addi $r23, $r23, 1  #update total count of game frame 
 addi $r26, $r26, 1 #update score
 sub $r1, $r1, $r22 #update position of pipe

@@ -1,3 +1,0 @@
-Main: Main__GC0, VGAController, clock_divider, 
-VGAController: VGAController__GC0, clock_divider, 
-clock_divider: clock_divider, 

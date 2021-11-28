@@ -33,7 +33,7 @@
  *
  **/
 
-module CPU_tb #(parameter FILE = "game");
+module CPU_tb #(parameter FILE = "game_tester");
 
 	// FileData
 	localparam DIR = "Test Files/";
