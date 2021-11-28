@@ -9,10 +9,20 @@ module VGAController(
 
 	// Register Contents
 
-	input[31:0] pipe1,
-	input[31:0] pipe2,
-    input[31:0] pipe3,
-    input[31:0] pipe4,
+	input[31:0] pipe1x,
+	input[31:0] pipe2x,
+    input[31:0] pipe3x,
+    input[31:0] pipe4x,
+
+    input[31:0] pipe1bottomtop,
+    input[31:0] pipe2bottomtop,
+    input[31:0] pipe3bottomtop,
+    input[31:0] pipe4bottomtop,
+
+    input[31:0] pipe1yspace,
+    input[31:0] pipe2yspace,
+    input[31:0] pipe3yspace,
+    input[31:0] pipe4yspace,
 
     input[31:0] bird_top_left,
     input[31:0] current_score,
@@ -42,12 +52,12 @@ module VGAController(
 		SCREEN_HEIGHT = 480, // Standard VGA Height
 		BITS_PER_COLOR = 12, // Nexys A7 uses 12 bits/color
 
-        PIPE_WIDTH = 70,
-        PIPE_CAP_HEIGHT = 10,
+        PIPE_WIDTH = 57,
+        PIPE_CAP_HEIGHT = 0,     // 39
 
-		BIRD_WIDTH = 35,
-		BIRD_HEIGHT = 35,
-		BIRD_LEFT_EDGE = 90;
+		BIRD_WIDTH = 47,
+		BIRD_HEIGHT = 33,
+		BIRD_LEFT_EDGE = 60;
 
 	wire active, screenEnd;
 	wire[9:0] x;
@@ -95,35 +105,41 @@ module VGAController(
                     .colorData(splashScreenColorData));
 
         // bird
-        BirdDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR),
+        BirdDisplay #(.BITS_PER_COLOR(BITS_PER_COLOR),
                       .BIRD_LEFT_EDGE(BIRD_LEFT_EDGE), .BIRD_WIDTH(BIRD_WIDTH), .BIRD_HEIGHT(BIRD_HEIGHT))
             birdDisplay(.inside_bird(inside_bird), .colorData(birdColorData),
-                                .clk(clk), .x(x), .y(y), .bird_reg(bird_top_left));
+                                .clk(clk), .x(x), .y(y), .bird_top_edge(bird_top_left));
 
 
         // display for each of pipes
 
-        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+        PipeDisplay #(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe1Display(.inside_pipe(inside_pipe1), .colorData(pipe1_colorData),
-                                    .clk(clk), .x(x), .y(y), .pipe_reg(pipe1));
-        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+                         .clk(clk), .x(x), .y(y),
+                         .x_left_edge(pipe1x), .y_bottom_pipe_top(pipe1bottomtop), .y_gap_height(pipe1yspace));
+        PipeDisplay #(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe2Display(.inside_pipe(inside_pipe2), .colorData(pipe2_colorData),
-                                .clk(clk), .x(x), .y(y), .pipe_reg(pipe2));
-        PipeDisplay #(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+                         .clk(clk), .x(x), .y(y),
+                         .x_left_edge(pipe2x), .y_bottom_pipe_top(pipe2bottomtop), .y_gap_height(pipe2yspace));
+        PipeDisplay #(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                       .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe3Display(.inside_pipe(inside_pipe3), .colorData(pipe3_colorData),
-                                .clk(clk), .x(x), .y(y), .pipe_reg(pipe3));
-        PipeDisplay#(.SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+                         .clk(clk), .x(x), .y(y),
+                         .x_left_edge(pipe3x), .y_bottom_pipe_top(pipe3bottomtop), .y_gap_height(pipe3yspace));
+        PipeDisplay#(.SCREEN_HEIGHT(SCREEN_HEIGHT),
                      .PIPE_WIDTH(PIPE_WIDTH), .PIPE_CAP_HEIGHT(PIPE_CAP_HEIGHT), .BITS_PER_COLOR(BITS_PER_COLOR))
             pipe4Display(.inside_pipe(inside_pipe4), .colorData(pipe4_colorData),
-                                .clk(clk), .x(x), .y(y), .pipe_reg(pipe4));
+                         .clk(clk), .x(x), .y(y),
+                         .x_left_edge(pipe4x), .y_bottom_pipe_top(pipe4bottomtop), .y_gap_height(pipe4yspace));
 
 
 	// Quickly assign the output colors to their channels using concatenation
 
-	wire game_underway = pipe1 != 32'b0 || pipe2 != 32'b0 || pipe3 != 32'b0 || pipe4 != 32'b0 ||
+	wire game_underway = pipe1bottomtop != 32'b0 || pipe2bottomtop != 32'b0 || pipe3bottomtop != 32'b0 || pipe4bottomtop != 32'b0 ||
+	                     pipe1yspace != 32'b0 || pipe2yspace != 32'b0 || pipe3yspace != 32'b0 || pipe4yspace != 32'b0 ||
+	                     pipe1x != 32'b0 || pipe2x != 32'b0 || pipe3x != 32'b0 || pipe4x != 32'b0 ||
                          bird_top_left != 32'b0 || current_score != 32'b0;
 
 	assign {VGA_R, VGA_G, VGA_B} =  !active ? 12'b0 :

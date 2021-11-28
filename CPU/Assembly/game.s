@@ -1,10 +1,10 @@
+
 init: 
 #initialize score 
 #assume bird width to be 34
 #assume bird height to be 48
 #assume pipe width to be 58
 #keep high score at memory address 0
-
 
 init:
 addi $r1, $r0, 120              #pipe 1 x left edge
@@ -30,10 +30,9 @@ addi $r26, $r0, 0 #initialize game score to 0
 lw $r27, 0($r0) #find high score
 
 game_loop:
-#check if button pressed
 addi $r13, $r13,-1
-jal check_collision #check if collision occurred
-bne $r29, $r0, 2 #check if flappy should jump
+j check_collision #check if collision occurred
+bne $r29, $r0, 2 #check if flappy should jump/check if button pressed
 bne $r28, $r0, 2 #check if frame should be updated
 j game_loop
 j button_pressed
