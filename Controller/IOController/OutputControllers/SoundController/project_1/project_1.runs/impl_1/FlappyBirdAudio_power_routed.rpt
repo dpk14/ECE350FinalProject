@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Sat Nov 27 17:00:09 2021
+| Date             : Sat Nov 27 22:06:01 2021
 | Host             : LAPTOP-D1B7JSE5 running 64-bit major release  (build 9200)
 | Command          : report_power -file FlappyBirdAudio_power_routed.rpt -pb FlappyBirdAudio_power_summary_routed.pb -rpx FlappyBirdAudio_power_routed.rpx
 | Design           : FlappyBirdAudio
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.242        |
+| Total On-Chip Power (W)  | 3.161        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.131        |
-| Device Static (W)        | 0.111        |
+| Dynamic (W)              | 3.051        |
+| Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 70.2         |
-| Junction Temperature (C) | 39.8         |
+| Max Ambient (C)          | 70.6         |
+| Junction Temperature (C) | 39.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.127 |       95 |       --- |             --- |
-|   LUT as Logic |     0.097 |       26 |     63400 |            0.04 |
-|   CARRY4       |     0.017 |       13 |     15850 |            0.08 |
-|   Register     |     0.007 |       41 |    126800 |            0.03 |
+| Slice Logic    |     0.210 |      102 |       --- |             --- |
+|   LUT as Logic |     0.178 |       29 |     63400 |            0.05 |
+|   CARRY4       |     0.019 |       14 |     15850 |            0.09 |
+|   Register     |     0.008 |       41 |    126800 |            0.03 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.075 |       59 |       --- |             --- |
-| I/O            |     2.929 |        5 |       210 |            2.38 |
-| Static Power   |     0.111 |          |           |                 |
-| Total          |     3.242 |          |           |                 |
+| Signals        |     0.077 |       58 |       --- |             --- |
+| I/O            |     2.764 |        5 |       210 |            2.38 |
+| Static Power   |     0.110 |          |           |                 |
+| Total          |     3.161 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.232 |       0.206 |      0.026 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.126 |       0.107 |      0.019 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.832 |       0.828 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.317 |       0.292 |      0.026 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.120 |       0.101 |      0.019 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.785 |       0.781 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,8 +138,8 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| FlappyBirdAudio |     3.131 |
-|   serializer    |     0.150 |
+| FlappyBirdAudio |     3.051 |
+|   serializer    |     0.234 |
 +-----------------+-----------+
 
 

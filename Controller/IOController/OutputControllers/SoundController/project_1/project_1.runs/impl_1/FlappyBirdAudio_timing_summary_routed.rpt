@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sat Nov 27 17:00:09 2021
+| Date         : Sat Nov 27 22:06:01 2021
 | Host         : LAPTOP-D1B7JSE5 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file FlappyBirdAudio_timing_summary_routed.rpt -pb FlappyBirdAudio_timing_summary_routed.pb -rpx FlappyBirdAudio_timing_summary_routed.rpx -warn_on_violation
 | Design       : FlappyBirdAudio
@@ -42,7 +42,7 @@ Table of Contents
 1. checking no_clock (41)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (80)
+4. checking unconstrained_internal_endpoints (73)
 5. checking no_input_delay (0)
 6. checking no_output_delay (1)
 7. checking multiple_clock (0)
@@ -67,9 +67,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (80)
+4. checking unconstrained_internal_endpoints (73)
 -------------------------------------------------
- There are 80 pins that are not constrained for maximum delay. (HIGH)
+ There are 73 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
