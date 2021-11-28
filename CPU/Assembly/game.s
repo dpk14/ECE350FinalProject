@@ -1,10 +1,3 @@
-nop # Flappy bird assembly code
-nop
-nop # Author: Jason + Daniel
-nop
-nop
-nop
-
 init:
 addi $r1, $r0, 120              #pipe 1 x left edge
 addi $r2, $r0, 190              #pipe 1 y bottom pipe top
@@ -19,7 +12,7 @@ addi $r10, $r0, 570             #pipe 4 x left edge
 addi $r11, $r0, 240             #pipe 4 y bottom pipe top
 addi $r12, $r0, 150             #pipe 4 y gap height
 addi $r13, $r0, 325              #bird's y coord (top)
-addi $r14, $r0, 94 #bird's (right) x coord
+addi $r14, $r0, 94 #bird's (right) x coord 
 addi $r21, $r0, 10 #r21 scores vertical height gained by bird on jump
 addi $r22, $r0, 1 #r22 store speed of incoming pipe
 addi $r23, $r0, 0 #r23 stores how many game rates we've gone through
@@ -46,7 +39,7 @@ j game_loop
 
 check_fall:
 addi $r17, $r13, -48 #make $r17 the bottom of the bird
-bne $r17, $r0, 1 #if $r17 is not 0 then do not end game
+bne $r17, $r0, 1 #if $r17 is not 0 then do not end game 
 j end_game #end game
 add $r17, $r0, $r0 #clear $r17
 j game_loop
@@ -65,7 +58,7 @@ sub $r23, $r23, $r23
 sub $r28, $r28, $r28 #clear frame rate register
 j game_loop
 
-check_collision:  #just checking pipe 1 for now
+check_collision:  #just checking pipe 1 for now 
 addi $r18, $r13, -48 #set $r18 to temporarily be bottom edge of bird
 add $r17, $r2, $r3, #set $r17 to temporarily be "height" of top pipe
 blt $r18, $r2, 2  #branch if bottom edge of bird is below top edge of pipe

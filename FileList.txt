@@ -5,6 +5,10 @@ C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\Ga
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputController.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputControllerTB.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\AudioController.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\FlappyBirdAudio.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\FlappyBirdAudio_tb.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\PWMDeserializer.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\PWMSerializer.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGAController.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGATimingGenerator.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\BirdDisplay.v

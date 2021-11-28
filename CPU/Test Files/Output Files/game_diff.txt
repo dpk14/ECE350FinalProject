@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Reg:  1 Expected:   419922120 Actual:         120
 Reg:  2 Expected:   629432620 Actual:         190
 Reg:  3 Expected:   839557520 Actual:         100
@@ -19,3 +20,11 @@ Reg: 22 Expected:           0 Actual:           1
 Reg: 24 Expected:           0 Actual:         500
 Reg: 25 Expected:           0 Actual:           1
 Reg: 30 Expected:          10 Actual:           0
+=======
+Reg:  0 Expected:           4 Actual:           0
+Reg:  1 Expected:           5 Actual:           0
+Reg:  2 Expected:          -4 Actual:           0
+Reg:  3 Expected:          -5 Actual:           0
+Reg: 10 Expected:          18 Actual:           0
+Reg: 31 Expected:          17 Actual:           0
+>>>>>>> 202f69143e1b7082255355948d1bff978b6a7986

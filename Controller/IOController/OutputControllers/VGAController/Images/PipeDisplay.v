@@ -47,7 +47,6 @@ module PipeDisplay #(parameter SCREEN_HEIGHT = 480,
 
 
     // what part of the pipe to display
-
     wire [9:0] x_right_edge = x_left_edge + PIPE_WIDTH;
     wire [8:0] y_top_pipe_bottom = y_bottom_pipe_top - y_gap_height;
 
