@@ -7,7 +7,7 @@ module frame_rdy_instructionbuilder(instruction);
     // opcode = 00101 (addi)
     assign instruction[31:27] = 5'd5;
 
-    // rd = 29
+    // rd = 28
     assign instruction[26:22] = 5'd28;
 
     // rs = 0

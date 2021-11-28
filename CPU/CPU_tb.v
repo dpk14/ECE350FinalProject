@@ -36,7 +36,7 @@
 module CPU_tb #(parameter FILE = "nop");
 
 	// FileData
-	localparam DIR = "../CPU/Test Files/";
+	localparam DIR = "Test Files/";
 	localparam MEM_DIR = "Memory Files/";
 	localparam OUT_DIR = "Output Files/";
 	localparam VERIF_DIR = "Verification Files/";
@@ -97,6 +97,7 @@ module CPU_tb #(parameter FILE = "nop");
 		// IO
 		.interrupt_instruction(32'b0)
 		);
+
 
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({DIR, MEM_DIR, FILE, ".mem"}))

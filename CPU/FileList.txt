@@ -51,3 +51,6 @@ C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\Component
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\Components\Stages\memory.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\Components\Stages\multdiv_stage.v
 C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\Components\Stages\writeback.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\InstructionBuilder\frame_rdy_instructionbuilder.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\InstructionBuilder\jump_key_input_instructionbuilder.v
+C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\CPU\RegisterParsers\pipe_register_parser.v
