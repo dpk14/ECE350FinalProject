@@ -1,4 +1,3 @@
-
 init: 
 #initialize score 
 #assume bird width to be 34
@@ -7,9 +6,9 @@ init:
 #keep high score at memory address 0
 
 init:
-addi $r1, $r0, 120              #pipe 1 x left edge
-addi $r2, $r0, 190              #pipe 1 y center
-addi $r3, $r0, 100              #pipe 1 y gap height
+addi $r1, $r0, 240              #pipe 1 x left edge
+addi $r2, $r0, 340              #pipe 1 y center
+addi $r3, $r0, 200              #pipe 1 y gap height
 addi $r4, $r0, 270              #pipe 2 x left edge
 addi $r5, $r0, 140              #pipe 2 y center
 addi $r6, $r0, 150              #pipe 2 y gap height
@@ -20,24 +19,30 @@ addi $r10, $r0, 570             #pipe 4 x left edge
 addi $r11, $r0, 240             #pipe 4 y center
 addi $r12, $r0, 150             #pipe 4 y gap height
 addi $r13, $r0, 325              #bird's y coord (top)
-addi $r14, $r0, 94 #bird's (right) x coord (120+10)
+addi $r14, $r0, 94 #bird's (right) x coord 
 addi $r21, $r0, 10 #r21 scores vertical height gained by bird on jump
 addi $r22, $r0, 1 #r22 store speed of incoming pipe
-addi $r23, $r0,0 #r23 stores how many game rates we've gone through 
+addi $r23, $r0, 0 #r23 stores how many game rates we've gone through 
 addi $r24, $r0, 500 #$r24 stores number of game loops to go through before updating difficulty
 addi $r25, $r0, 1 #set game to be underway
 addi $r26, $r0, 0 #initialize game score to 0
 lw $r27, 0($r0) #find high score
 
+addi $r20, $r0, 5 #game loops to run through before updating
+
+
 game_loop:
-addi $r13, $r13,-1
-j check_collision #check if collision occurred
-bne $r29, $r0, 2 #check if flappy should jump/check if button pressed
-bne $r28, $r0, 2 #check if frame should be updated
+addi $r15, $r15, 1
+bne $r20, $r15, 7
+addi $r23, $r23, 1  #update total count of game frame 
+addi $r26, $r26, 1 #update score
+sub $r1, $r1, $r22 #update position of pipe
+sub $r28, $r28, $r28 #clear frame rate register
+sub $r15, $r15, $r15 #clear reg 15
+bne $r1, $r0, 1
+addi $r1, $r0, 580
 j game_loop
-j button_pressed
-j move_pipes #check if need to update screen 
-j check_fall
+
 
 check_fall:
 addi $r17, $r13, -48 #make $r17 the bottom of the bird
@@ -46,14 +51,16 @@ j end_game #end game
 add $r17, $r0, $r0 #clear $r17 
 j game_loop
 
+
+
 move_pipes: #update pipe position (may have to tweak addi parameter to see how fast pipe moves)
-addi $r23,$r23,1  #update total count of game frame 
+addi $r23, $r23, 1  #update total count of game frame 
 addi $r26, $r26, 1 #update score
 addi $r1, $r1, -1 #update position of pipe
 bne $r1, $r0, 1 #move pipe back if it reaches end of screen 
 addi $r1, $r0, 582
 bne $r24, $r23, 3 #if equal then we update speed at which pipes move and clear r10
-addi $r22, $r22,1
+addi $r22, $r22, 1
 sub $r23, $r23, $r23
 sub $r28, $r28, $r28 #clear frame rate register
 j game_loop
@@ -61,7 +68,7 @@ j game_loop
 check_collision:  #just checking pipe 1 for now 
 addi $r18, $r13, -48 #set $r18 to temporarily be bottom edge of bird
 add $r17, $r2, $r3, #set $r17 to temporarily be "height" of top pipe
-blt $r18, $r2,2  #branch if bottom edge of bird is below top edge of pipe 
+blt $r18, $r2, 2  #branch if bottom edge of bird is below top edge of pipe 
 blt $r17, $r13, 1  #branch if top edge of bird is above top pipe height
 j clear_temp_pipes #between pipes can jump back as no collision is possible
 add $r0, $r0, $r0 #collision is possible check left, right and midpoint
