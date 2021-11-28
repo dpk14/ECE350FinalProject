@@ -11,7 +11,7 @@ module InputController(interrupt_instrucion, jump_key, frame_rt_clk, proc_clk, r
     localparam MHz = 1000000;
     localparam PROC_FREQ = 50*MHz;
 
-    localparam GAME_FRAME_RT = 10*MHz; // 60 fps
+    localparam GAME_FRAME_RT = 64'd60; // 60 fps
 
     assign CounterLimit = (PROC_FREQ / GAME_FRAME_RT) - 1;
 
