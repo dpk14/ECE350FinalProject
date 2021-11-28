@@ -17,7 +17,7 @@ module InputControllerTB;
     localparam SYSTEM_FREQ = 100*MHz; // System clock frequency
     localparam PROC_FREQ = 50*MHz; // System clock frequency
 
-    localparam GAME_FRAME_RT = 10*MHz;
+    localparam GAME_FRAME_RT = 64'd60;
 
     InputController input_controller(.interrupt_instrucion(interrupt_instruction), .jump_key(jump),
                                     .frame_rt_clk(frame_rate_clk), .proc_clk(clock),
