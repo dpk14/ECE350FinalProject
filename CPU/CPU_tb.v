@@ -33,7 +33,7 @@
  *
  **/
 
-module CPU_tb #(parameter FILE = "game_tester");
+module CPU_tb #(parameter FILE = "game");
 
 	// FileData
 	localparam DIR = "Test Files/";
@@ -95,7 +95,7 @@ module CPU_tb #(parameter FILE = "game_tester");
 		.data(memDataIn), .q_dmem(memDataOut),
 
 		// IO
-		.interrupt_instruction(32'b0)
+		.interrupt_instruction(32'd0)
 		);
 
 

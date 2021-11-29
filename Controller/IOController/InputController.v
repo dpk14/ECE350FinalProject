@@ -5,16 +5,16 @@ module InputController(interrupt_instrucion, jump_key, frame_rt_clk, proc_clk, r
 
     // reads from different registers at frame rate, compares contents
 
-    wire[64:0] CounterLimit;
-    reg[64:0] counter = 0;
+    wire[63:0] CounterLimit;
+    reg[63:0] counter = 0;
 
     localparam MHz = 1000000;
     localparam PROC_FREQ = 50*MHz;
 
-    localparam GAME_FRAME_RT = 10*MHz; // 60 fps
-
-    assign CounterLimit = (PROC_FREQ / GAME_FRAME_RT) - 1;
-
+    localparam GAME_FRAME_RT = 1; // 60 fps
+    assign CounterLimit = PROC_FREQ; 
+    //assign CounterLimit = 10000000*(PROC_FREQ / GAME_FRAME_RT) - 1;
+   
     reg key_interrupt_reg = 0;
     reg next_frame_rdy = 0;
 
@@ -30,7 +30,8 @@ module InputController(interrupt_instrucion, jump_key, frame_rt_clk, proc_clk, r
                     next_frame_rdy <= 0;
                 end
                 counter <= counter + 1;
-            end else begin
+            end 
+            else begin
                 next_frame_rdy <= 1;
                 counter <= 0;
                 if (jump_key) begin
