@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Nov 29 15:04:25 2021
-# Process ID: 24296
+# Start of session at: Mon Nov 29 15:17:13 2021
+# Process ID: 9820
 # Current directory: C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/bird_project/bird_project.runs/synth_1
 # Command line: vivado.exe -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
 # Log file: C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/bird_project/bird_project.runs/synth_1/Main.vds

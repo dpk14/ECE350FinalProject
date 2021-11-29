@@ -15,7 +15,7 @@ module JumpController(frame_rt_clk, proc_clk, reset, can_jump);
     //localparam BUTTON_RT = 10; // 60 fps
     localparam EmpiricalParam= 10; 
    
-    assign CounterLimit = EmpiricalParam-3;
+    assign CounterLimit = EmpiricalParam-4;
 
     always @(posedge proc_clk or posedge reset) begin
         if(reset) begin
