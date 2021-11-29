@@ -1,9 +1,18 @@
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputController.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\InputControllerTB.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\AudioController.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGAController.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGATimingGenerator.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\BirdDisplay.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\Image.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\PipeDisplay.v
-C:\Users\dpk14\SchoolProjects\ECE350\FlappyBird\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\MemoryFiles\IMG_RAM.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\clock_divider.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\frame_rdy_instructionbuilder.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\InputController.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\InputControllerTB.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\JumpController.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\JumpController_tb.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\jump_key_input_instructionbuilder.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\AudioController.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\FlappyBirdAudio.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\FlappyBirdAudio_tb.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\PWMDeserializer.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\SoundController\PWMSerializer.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGAController.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\VGATimingGenerator.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\BirdDisplay.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\Image.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\PipeDisplay.v
+C:\Users\joshr\Documents\Duke\Duke Fall 2021\ECE350\ECE350FinalProject\Controller\IOController\OutputControllers\VGAController\Images\MemoryFiles\IMG_RAM.v
