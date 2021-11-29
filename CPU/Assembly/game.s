@@ -29,10 +29,13 @@ addi $r26, $r0, 0 #initialize game score to 0
 game_loop:
 bne $r28, $r0, 1 #branch to move barrier instrutions if interrupt
 j game_loop
+j move_items 
+
+move_items:
 addi $r23, $r23, 1  #update total count of game frame 
 addi $r26, $r26, 1 #update score
 sub $r1, $r1, $r22 #update position of pipe
-sub $r13, $r13, $r28 #update bird position (value in reg 28 is just 1) 
+addi $r13, $r13, 1 #update bird position 
 add $r28, $r0, $r0 #(clear reg 28)
 bne $r1, $r0, 1 # if not at end of screen ignore next instruction
 addi $r1, $r0, 600 #if at end of screeen push pipe back 
