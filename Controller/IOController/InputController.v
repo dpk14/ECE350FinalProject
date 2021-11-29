@@ -5,8 +5,8 @@ module InputController(interrupt_instrucion, jump_key, frame_rt_clk, proc_clk, r
 
     // reads from different registers at frame rate, compares contents
 
-    wire[63:0] CounterLimit;
-    reg[63:0] counter = 0;
+    wire[31:0] CounterLimit;
+    reg[31:0] counter = 0;
 
     localparam MHz = 1000000;
     localparam PROC_FREQ = 50*MHz;
