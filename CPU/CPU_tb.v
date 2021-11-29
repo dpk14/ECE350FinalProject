@@ -36,7 +36,7 @@
 module CPU_tb #(parameter FILE = "game");
 
 	// FileData
-	localparam DIR = "Test Files/";
+	localparam DIR = "Assembly/";
 	localparam MEM_DIR = "Memory Files/";
 	localparam OUT_DIR = "Output Files/";
 	localparam VERIF_DIR = "Verification Files/";
