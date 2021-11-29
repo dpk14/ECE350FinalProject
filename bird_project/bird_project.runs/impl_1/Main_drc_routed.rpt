@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Nov 29 15:21:13 2021
+| Date         : Mon Nov 29 18:32:33 2021
 | Host         : LAPTOP-D1B7JSE5 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Main_drc_routed.rpt -pb Main_drc_routed.pb -rpx Main_drc_routed.rpx
 | Design       : Main
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 25
+             Violations found: 34
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 14         |
-| DPOP-1   | Warning  | PREG Output pipelining                              | 5          |
+| DPIP-1   | Warning  | Input pipelining                                    | 20         |
+| DPOP-1   | Warning  | PREG Output pipelining                              | 8          |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 5          |
 +----------+----------+-----------------------------------------------------+------------+
 
@@ -119,6 +119,36 @@ Input pipelining
 DSP vga_controller/pipe1Display/p_1_out input vga_controller/pipe1Display/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
+DPIP-1#15 Warning
+Input pipelining  
+DSP vga_controller/pipe2Display/imgAddress0 input vga_controller/pipe2Display/imgAddress0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP vga_controller/pipe2Display/p_1_out input vga_controller/pipe2Display/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP vga_controller/pipe3Display/imgAddress0 input vga_controller/pipe3Display/imgAddress0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP vga_controller/pipe3Display/p_1_out input vga_controller/pipe3Display/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP vga_controller/pipe4Display/imgAddress0 input vga_controller/pipe4Display/imgAddress0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP vga_controller/pipe4Display/p_1_out input vga_controller/pipe4Display/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
 DPOP-1#1 Warning
 PREG Output pipelining  
 DSP CPU/CPU/multdiv_stage/multdiv/mult/real_prod0 output CPU/CPU/multdiv_stage/multdiv/mult/real_prod0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -142,6 +172,21 @@ Related violations: <none>
 DPOP-1#5 Warning
 PREG Output pipelining  
 DSP vga_controller/pipe1Display/imgAddress0__0 output vga_controller/pipe1Display/imgAddress0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP vga_controller/pipe2Display/imgAddress0__0 output vga_controller/pipe2Display/imgAddress0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#7 Warning
+PREG Output pipelining  
+DSP vga_controller/pipe3Display/imgAddress0__0 output vga_controller/pipe3Display/imgAddress0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#8 Warning
+PREG Output pipelining  
+DSP vga_controller/pipe4Display/imgAddress0__0 output vga_controller/pipe4Display/imgAddress0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Nov 29 15:21:20 2021
+| Date             : Mon Nov 29 18:32:45 2021
 | Host             : LAPTOP-D1B7JSE5 running 64-bit major release  (build 9200)
 | Command          : report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
 | Design           : Main
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 69.044 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 82.857 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 68.189                           |
-| Device Static (W)        | 0.855                            |
+| Dynamic (W)              | 81.996                           |
+| Device Static (W)        | 0.861                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
 | Junction Temperature (C) | 125.0                            |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    21.838 |     7389 |       --- |             --- |
-|   LUT as Logic |    21.026 |     3086 |     63400 |            4.87 |
-|   CARRY4       |     0.449 |      167 |     15850 |            1.05 |
-|   Register     |     0.340 |     1908 |    126800 |            1.50 |
+| Slice Logic    |    24.702 |     8326 |       --- |             --- |
+|   LUT as Logic |    23.835 |     3821 |     63400 |            6.03 |
+|   CARRY4       |     0.467 |      242 |     15850 |            1.53 |
+|   Register     |     0.378 |     1916 |    126800 |            1.51 |
 |   BUFG         |     0.012 |        2 |        32 |            6.25 |
-|   F7/F8 Muxes  |     0.011 |        5 |     63400 |           <0.01 |
-|   Others       |     0.000 |     1845 |       --- |             --- |
-| Signals        |    27.948 |     5348 |       --- |             --- |
-| Block RAM      |     3.339 |     93.5 |       135 |           69.26 |
-| DSPs           |     3.551 |       10 |       240 |            4.17 |
-| I/O            |    11.513 |       16 |       210 |            7.62 |
-| Static Power   |     0.855 |          |           |                 |
-| Total          |    69.044 |          |           |                 |
+|   F7/F8 Muxes  |     0.010 |        4 |     63400 |           <0.01 |
+|   Others       |     0.000 |     1873 |       --- |             --- |
+| Signals        |    34.801 |     6330 |       --- |             --- |
+| Block RAM      |     6.447 |      103 |       135 |           76.30 |
+| DSPs           |     6.170 |       19 |       240 |            7.92 |
+| I/O            |     9.875 |       16 |       210 |            7.62 |
+| Static Power   |     0.861 |          |           |                 |
+| Total          |    82.857 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,16 +74,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    56.989 |      56.397 |      0.592 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.514 |       0.422 |      0.093 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     3.260 |       3.256 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    72.172 |      71.577 |      0.595 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.454 |       0.362 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     2.797 |       2.793 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.334 |       0.287 |      0.047 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.601 |       0.551 |      0.050 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -141,57 +141,61 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| Main                        |    68.189 |
-|   CPU                       |    48.803 |
-|     CPU                     |    41.159 |
-|       decoder               |     7.736 |
-|       executer              |    19.202 |
-|       fetcher               |     0.264 |
-|       memory_stage          |     1.081 |
-|       multdiv_stage         |    12.365 |
-|       writebacker           |     0.512 |
-|     InstMem                 |     0.602 |
-|     ProcMem                 |     0.349 |
-|     RegisterFile            |     6.693 |
-|       outMuxA               |     0.581 |
-|       outMuxB               |     0.800 |
-|       reg1                  |     0.203 |
-|       reg10                 |     0.085 |
+| Main                        |    81.996 |
+|   CPU                       |    55.219 |
+|     CPU                     |    44.283 |
+|       decoder               |     8.745 |
+|       executer              |    16.869 |
+|       fetcher               |     0.407 |
+|       memory_stage          |     3.396 |
+|       multdiv_stage         |    14.406 |
+|       writebacker           |     0.459 |
+|     InstMem                 |     0.840 |
+|     ProcMem                 |     0.491 |
+|     RegisterFile            |     9.606 |
+|       outMuxA               |     1.021 |
+|       outMuxB               |     1.267 |
+|       reg1                  |     0.328 |
+|       reg10                 |     0.267 |
+|       reg11                 |     0.005 |
 |       reg12                 |     0.003 |
-|       reg13                 |     0.114 |
-|       reg16                 |     0.128 |
-|       reg17                 |     0.001 |
-|       reg18                 |     0.171 |
-|       reg19                 |     0.141 |
-|       reg2                  |     0.019 |
-|       reg20                 |     0.002 |
-|       reg22                 |     0.085 |
+|       reg13                 |     0.201 |
+|       reg16                 |     0.341 |
+|       reg17                 |     0.002 |
+|       reg18                 |     0.002 |
+|       reg19                 |     0.167 |
+|       reg2                  |     0.023 |
+|       reg20                 |     0.003 |
+|       reg22                 |     0.206 |
 |       reg24                 |     0.002 |
-|       reg25                 |     0.118 |
+|       reg25                 |     0.132 |
 |       reg26                 |     0.002 |
 |       reg28                 |     0.099 |
 |       reg3                  |     0.002 |
-|       reg30                 |     0.043 |
-|       reg31                 |     3.191 |
-|       reg4                  |     0.693 |
-|       reg5                  |     0.113 |
-|       reg6                  |     0.002 |
-|       reg7                  |     0.084 |
-|       reg8                  |     0.007 |
+|       reg31                 |     3.686 |
+|       reg4                  |     1.330 |
+|       reg5                  |     0.007 |
+|       reg6                  |     0.003 |
+|       reg7                  |     0.241 |
+|       reg8                  |     0.263 |
 |       reg9                  |     0.002 |
-|   input_controller          |     0.297 |
-|     jumper                  |     0.151 |
+|   input_controller          |     0.553 |
+|     jumper                  |     0.401 |
 |   processor_clock_divider   |     0.002 |
-|   vga_controller            |     7.379 |
-|     Display                 |     0.541 |
-|     background              |     2.492 |
-|       ColorPalette          |     0.536 |
-|       ImageData             |     1.957 |
-|     birdDisplay             |     1.017 |
-|       birdImage             |     0.240 |
-|     pipe1Display            |     2.350 |
-|       pipeImage             |     1.152 |
-|     processor_clock_divider |     0.103 |
+|   vga_controller            |    16.117 |
+|     Display                 |     1.510 |
+|     background              |     2.139 |
+|       ColorPalette          |     0.196 |
+|       ImageData             |     1.943 |
+|     birdDisplay             |     1.091 |
+|       birdImage             |     0.280 |
+|     pipe1Display            |     3.653 |
+|       pipeImage             |     2.334 |
+|     pipe2Display            |     1.248 |
+|     pipe3Display            |     3.644 |
+|       pipeImage             |     2.317 |
+|     pipe4Display            |     1.397 |
+|     processor_clock_divider |     0.115 |
 +-----------------------------+-----------+
 
 
