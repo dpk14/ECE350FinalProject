@@ -1,8 +1,8 @@
-#initialize score 
-#assume bird width to be 34
-#assume bird height to be 48
-#assume pipe width to be 58
-#keep high score at memory address 0
+#splash_init: 
+#lw $r27, 0($r0) #find high score
+#bne $r29, $r0, 1
+#j splash_init
+#j game_init
 
 game_init:
 addi $r1, $r0, 240              #pipe 1 x left edge
