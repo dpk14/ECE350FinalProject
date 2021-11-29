@@ -17,7 +17,7 @@ addi $r9, $r0, 200              #pipe 3 y gap height
 addi $r10, $r0, 570             #pipe 4 x left edge
 addi $r11, $r0, 240             #pipe 4 y center
 addi $r12, $r0, 150             #pipe 4 y gap height
-addi $r13, $r0, 225              #bird's y coord (top)
+addi $r13, $r0, 125              #bird's y coord (top)
 addi $r14, $r0, 94 #bird's (right) x coord 
 addi $r22, $r0, 1 #r22 store speed of incoming pipe
 addi $r23, $r0, 0 #r23 stores how many game rates we've gone through 
