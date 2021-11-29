@@ -614,7 +614,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../CPU/Test Files/Memory Files/game.mem">
+      <File Path="$PPRDIR/../CPU/Assembly/game.mem">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

@@ -86,7 +86,7 @@ set_property ip_output_repo {c:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem {{C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Test Files/Memory Files/game.mem}}
+read_mem {{C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Assembly/game.mem}}
 read_verilog -library xil_defaultlib {
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/CPU.v}
