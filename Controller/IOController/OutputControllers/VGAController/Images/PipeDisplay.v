@@ -10,8 +10,9 @@ module PipeDisplay #(parameter SCREEN_HEIGHT = 480,
                     colorData);
 
     input clk;
-    input[31:0] x_left_edge, y_bottom_pipe_top, y_gap_height;
-    input[9:0] x;
+    input signed [31:0] x_left_edge;
+    input[31:0] y_bottom_pipe_top, y_gap_height;
+    input signed [10:0] x;
     input[8:0] y;
 
     output inside_pipe;
@@ -37,7 +38,7 @@ module PipeDisplay #(parameter SCREEN_HEIGHT = 480,
 
 
     // what part of the pipe to display
-    wire [9:0] x_right_edge = x_left_edge + PIPE_WIDTH;
+    wire signed [10:0] x_right_edge = x_left_edge + PIPE_WIDTH;
     wire [8:0] y_top_pipe_bottom = y_bottom_pipe_top - y_gap_height;
 
     wire inside_pipe_x = x >= x_left_edge &&

@@ -23,29 +23,23 @@ addi $r12, $r0, 0             #pipe 4 y gap height
 addi $r13, $r0, 0              #bird's y coord (top)
 addi $r14, $r0, 0 #bird's (right) x coord
 addi $r29, $r0, 0
-addi $r22, $r0, 1 #r22 store speed of incoming pipe
-addi $r23, $r0, 0 #r23 stores how many game rates we've gone through 
 
-addi $r24, $r0, 3600 #$r24 stores number of game loops to go through before updating difficulty
-addi $r25, $r0, 1 #set game to be underway
-addi $r26, $r0, 0 #initialize game score to 0
-#end of initialization
-
+splash_loop:
 bne $r29, $r0, 1
-j splash_init
+j splash_loop
 j game_init
 
 game_init:
-addi $r1, $r0, 240              #pipe 1 x left edge
+addi $r1, $r0, 200              #pipe 1 x left edge
 addi $r2, $r0, 340              #pipe 1 y center
 addi $r3, $r0, 200              #pipe 1 y gap height
-addi $r4, $r0, 310              #pipe 2 x left edge
+addi $r4, $r0, 340              #pipe 2 x left edge
 addi $r5, $r0, 300              #pipe 2 y center
 addi $r6, $r0, 150              #pipe 2 y gap height
-addi $r7, $r0, 420              #pipe 3 x left edge
+addi $r7, $r0, 480              #pipe 3 x left edge
 addi $r8, $r0, 340              #pipe 3 y center
 addi $r9, $r0, 200              #pipe 3 y gap height
-addi $r10, $r0, 570             #pipe 4 x left edge
+addi $r10, $r0, 620             #pipe 4 x left edge
 addi $r11, $r0, 240             #pipe 4 y center
 addi $r12, $r0, 150             #pipe 4 y gap height
 addi $r13, $r0, 125              #bird's y coord (top)
