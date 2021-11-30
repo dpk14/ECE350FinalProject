@@ -35,16 +35,6 @@ module PipeDisplay #(parameter SCREEN_HEIGHT = 480,
                            x - x_left_edge + PIPE_WIDTH*y), // inside_top_shaft
                .colorData(pipeColorData));
 
-//    // an image of the cap of a pipe
-//    image #(.WIDTH(PIPE_WIDTH), .HEIGHT(PIPE_CAP_HEIGHT),
-//            .IMG_FILE("pipe_cap_image.mem"),
-//            .CLR_FILE("pipe_cap_colors.mem"))
-//    pipeCapImage(.clk(clk),
-//                 .imgAddress(inside_bottom_cap ? // inside_bottom_shaft
-//                                            x - x_left_edge + PIPE_WIDTH*(y - y_bottom_pipe_top) :
-//                                            x - x_left_edge + PIPE_WIDTH*(y - y_top_pipe_bottom - PIPE_CAP_HEIGHT)), // inside_top_shaft
-//                 .colorData(pipeCapColorData));
-
 
     // what part of the pipe to display
     wire [9:0] x_right_edge = x_left_edge + PIPE_WIDTH;
