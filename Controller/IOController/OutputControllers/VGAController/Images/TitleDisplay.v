@@ -1,5 +1,5 @@
 module TitleDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480, BITS_PER_COLOR = 12,
-                               TITLE_WIDTH = 249, TITLE_HEIGHT = 246, TITLE_TOP_OFFSET = 60)
+                               TITLE_WIDTH = 249, TITLE_HEIGHT = 95, TITLE_TOP_OFFSET = 60)
                    (clk,
                    x, y,
 
@@ -18,7 +18,7 @@ module TitleDisplay #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480, BITS_PE
                     .IMG_FILE("title_image.mem"),
                     .CLR_FILE("title_colors.mem"))
             splash(.clk(clk),
-                    .imgAddress(x - ((SCREEN_WIDTH - TITLE_WIDTH) / 2) + TITLE_WIDTH*(y-TITLE_HEIGHT)),
+                    .imgAddress(x - ((SCREEN_WIDTH - TITLE_WIDTH) / 2) + TITLE_WIDTH*(y-TITLE_TOP_OFFSET)),
                     .colorData(titleData));
 
     assign inside_title = y >= TITLE_TOP_OFFSET &&

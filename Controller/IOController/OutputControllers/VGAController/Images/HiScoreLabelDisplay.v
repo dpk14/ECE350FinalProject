@@ -18,7 +18,7 @@ module HiScoreLabelDisplay  #(parameter SCREEN_WIDTH = 640, SCREEN_HEIGHT = 480,
                        .IMG_FILE("scoretext_image.mem"),
                        .CLR_FILE("scoretext_colors.mem"))
                hiscoreLabel(.clk(clk),
-                       .imgAddress(x - ((SCREEN_WIDTH - LABEL_WIDTH) / 2) + LABEL_WIDTH*(y-LABEL_HEIGHT)),
+                       .imgAddress(x - ((SCREEN_WIDTH - LABEL_WIDTH) / 2) + LABEL_WIDTH*(y-LABEL_TOP_OFFSET)),
                        .colorData(labelData));
 
        assign inside_label = y >= LABEL_TOP_OFFSET &&

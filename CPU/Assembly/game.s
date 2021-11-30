@@ -1,5 +1,4 @@
 splash_init:
-add $r29, $r0, $r0
 lw $r27, 0($r0) #find high score
 addi $r1, $r0, 0              #pipe 1 x left edge
 addi $r2, $r0, 0              #pipe 1 y center
@@ -16,6 +15,7 @@ addi $r12, $r0, 0             #pipe 4 y gap height
 addi $r13, $r0, 0              #bird's y coord (top)
 addi $r14, $r0, 0 #bird's (right) x coord
 addi $r26, $r0, 0
+addi $r29, $r0, 0
 
 splash_loop:
 bne $r29, $r0, 1
@@ -56,6 +56,7 @@ j game_loop
 
 move_items:
 addi $r23, $r23, 1  #update total count of game frame
+addi $r26, $r26, 1 #update score
 sub $r1, $r1, $r22 #update position of pipe 1
 sub $r4, $r4, $r22 #update position of pipe 2
 sub $r7, $r7, $r22 #update position of pipe 3
