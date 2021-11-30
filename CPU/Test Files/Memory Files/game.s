@@ -1,7 +1,9 @@
-splash_init: 
+splash_init:
 lw $r27, 0($r0) #find high score
+
+splash_loop:
 bne $r29, $r0, 1
-j splash_init
+j splash_loop
 j game_init
 
 game_init:
