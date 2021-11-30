@@ -61,10 +61,14 @@ module VGAController(
 
 		NUM_IMG_WIDTH = 378,
 		NUM_HEIGHT = 45,
-		SCORE_OFFSET = 40,
+		SCORE_OFFSET_GAME = 40,
+	    SCORE_OFFSET_SPLASH = TITLE_TOP_OFFSET*3 + TITLE_HEIGHT + NUM_HEIGHT,
+	    SCORE_TEXT_WIDTH = 195,
+	    SCORE_TEXT_HEIGHT = 46,
 
 		TITLE_WIDTH = 249,
-		TITLE_HEIGHT = 46;
+		TITLE_HEIGHT = 46,
+		TITLE_TOP_OFFSET = 60;
 
 	wire active, screenEnd;
 	wire[9:0] x;
@@ -89,11 +93,11 @@ module VGAController(
     wire[BITS_PER_COLOR-1:0] backgroundColorData,   // 12-bit color data at current pixel
                              pipe1_colorData, pipe2_colorData, pipe3_colorData, pipe4_colorData,
                              birdColorData,
-                             scoreData, titleData;
+                             scoreData, titleData, scoreLabelData;
 
     wire inside_pipe1, inside_pipe2, inside_pipe3, inside_pipe4,
          inside_bird,
-         inside_score,
+         inside_score, inside_score_label,
          inside_title;
 
 
@@ -106,8 +110,13 @@ module VGAController(
                     .colorData(backgroundColorData));
 
         TitleDisplay #(.BITS_PER_COLOR(BITS_PER_COLOR), .SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
-                       .TITLE_WIDTH(TITLE_WIDTH), .TITLE_HEIGHT(TITLE_HEIGHT))
+                       .TITLE_WIDTH(TITLE_WIDTH), .TITLE_HEIGHT(TITLE_HEIGHT), .TITLE_TOP_OFFSET(TITLE_TOP_OFFSET))
              titleDisplay(.inside_title(inside_title), .titleData(titleData),
+                                 .clk(clk), .x(x), .y(y));
+
+        HiScoreLabelDisplay #(.BITS_PER_COLOR(BITS_PER_COLOR), .SCREEN_WIDTH(SCREEN_WIDTH), .SCREEN_HEIGHT(SCREEN_HEIGHT),
+                       .LABEL_WIDTH(SCORE_TEXT_WIDTH), .LABEL_HEIGHT(SCORE_TEXT_HEIGHT), .LABEL_TOP_OFFSET(TITLE_TOP_OFFSET*2 + TITLE_HEIGHT))
+             hiscoreLabelDisplay(.inside_label(inside_score_label), .labelData(scoreLabelData),
                                  .clk(clk), .x(x), .y(y));
 
         // bird
@@ -141,9 +150,10 @@ module VGAController(
                          .x_left_edge(pipe4x), .y_bottom_pipe_top(pipe4bottomtop), .y_gap_height(pipe4yspace));
  */
 
-    ScoreDisplay #(.NUM_IMG_WIDTH(NUM_IMG_WIDTH), .NUM_HEIGHT(NUM_HEIGHT), .SCORE_OFFSET(SCORE_OFFSET),
+    ScoreDisplay #(.NUM_IMG_WIDTH(NUM_IMG_WIDTH), .NUM_HEIGHT(NUM_HEIGHT),
                     .SCREEN_WIDTH(SCREEN_WIDTH), .BITS_PER_COLOR(BITS_PER_COLOR))
         scoreDisplay(.inside_score(inside_score), .scoreData(scoreData),
+                     .SCORE_OFFSET(game_underway ? SCORE_OFFSET_GAME : SCORE_OFFSET_SPLASH),
                      .score(!game_underway ? high_score : current_score),
                      .clk(clk), .x(x), .y(y));
 
@@ -155,7 +165,9 @@ module VGAController(
                          bird_top_left != 32'b0 || current_score != 32'b0;
 
 	assign {VGA_R, VGA_G, VGA_B} = inside_score ? scoreData :
-	                               !game_underway ? (inside_title ? titleData : backgroundColorData) :
+	                               !game_underway ? (inside_title ? titleData :
+	                                                 inside_score_label ? scoreLabelData :
+	                                                 backgroundColorData) :
 	                               inside_pipe1 ? pipe1_colorData :
 	                               inside_pipe2 ? pipe2_colorData :
 	                               inside_pipe3 ? pipe3_colorData :

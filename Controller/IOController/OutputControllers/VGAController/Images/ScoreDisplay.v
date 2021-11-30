@@ -1,16 +1,17 @@
 module ScoreDisplay #(parameter SCREEN_WIDTH = 640,
-                               NUM_IMG_WIDTH = 342, NUM_HEIGHT = 46, SCORE_OFFSET = 40,
+                               NUM_IMG_WIDTH = 342, NUM_HEIGHT = 46,
                                BITS_PER_COLOR = 12)
                    (clk,
                    x, y,
                    score,
+                   SCORE_OFFSET,
 
                     // outputs
                     inside_score,
                     scoreData);
 
     input clk;
-    input[31:0] score;
+    input[31:0] score, SCORE_OFFSET;
     input[9:0] x;
     input[8:0] y;
 
@@ -32,21 +33,6 @@ module ScoreDisplay #(parameter SCREEN_WIDTH = 640,
                     x - ((SCREEN_WIDTH + NUM_WIDTH) / 2) + NUM_IMG_OFFSET_ONES + (NUM_IMG_WIDTH*(y - SCORE_OFFSET))),
                .colorData(scoreData));
 
-//    wire score_div_10 = score / 10;
-//    wire score_div_100 = score / 100;
-//
-//    wire[31:0] NUM_IMG_OFFSET_TENS = NUM_WIDTH*(
-//                                    score_div_10 == 0 || (score_div_10 > 10 && (score_div_10)%10 == 0) ? 0:
-//                                    score_div_10 == 1 || (score_div_10 - 1 > 10 && (score_div_10 - 1)%10 == 0) ? 1:
-//                                    score_div_10 == 2 || (score_div_10 - 2 > 10 && (score_div_10 - 2)%10 == 0) ? 2:
-//                                    score_div_10 == 3 || (score_div_10 - 3 > 10 && (score_div_10 - 3)%10 == 0) ? 3:
-//                                    score_div_10 == 4 || (score_div_10 - 4 > 10 && (score_div_10 - 4)%10 == 0) ? 4:
-//                                    score_div_10 == 5 || (score_div_10 - 5 > 10 && (score_div_10 - 5)%10 == 0) ? 5:
-//                                    score_div_10 == 6 || (score_div_10 - 6 > 10 && (score_div_10 - 6)%10 == 0) ? 6:
-//                                    score_div_10 == 7 || (score_div_10 - 7 > 10 && (score_div_10 - 7)%10 == 0) ? 7:
-//                                    score_div_10 == 8 || (score_div_10 - 8 > 10 && (score_div_10 - 8)%10 == 0) ? 8:
-//                                    score_div_10 == 9 || (score_div_10 - 9 > 10 && (score_div_10 - 9)%10 == 0) ? 9:
-//                                    0);
 
     wire [31:0] score_minus_100, score_minus_200, score_minus_300, score_minus_400, score_minus_500, score_minus_600, score_minus_700,
          score_minus_800, score_minus_900;
@@ -111,21 +97,6 @@ module ScoreDisplay #(parameter SCREEN_WIDTH = 640,
                                     score == 8 || (score - 8 > 10 && (score - 8)%10 == 0) ? 8:
                                     score == 9 || (score - 9 > 10 && (score - 9)%10 == 0) ? 9:
                                     0);
-
-    //    integer i;
-    //    integer score_tens;
-    //    integer sub_100_score;
-    //
-    //    initial begin:
-    //        for (i = 0; i < 10; i = i + 1) begin
-    //            if score - (i*100) < 100 begin
-    //                assign score_tens = score - (i*100);
-    //                assign NUM_IMG_OFFSET_HUNDREDS = NUM_WIDTH*i;
-    //
-    //            end
-    //        end
-    //    end
-
 
     wire inside_y_range = y >= SCORE_OFFSET &&
                           y <= SCORE_OFFSET + NUM_HEIGHT;
