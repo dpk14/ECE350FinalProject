@@ -1,12 +1,5 @@
-#initialize score 
-#assume bird width to be 46
-#assume bird height to be 34
-#assume pipe width to be 58
-#keep high score at memory address 0 
-
-#640*480 resolution of screen
-
-splash_init: 
+splash_init:
+add $r29, $r0, $r0
 lw $r27, 0($r0) #find high score
 addi $r1, $r0, 0              #pipe 1 x left edge
 addi $r2, $r0, 0              #pipe 1 y center
@@ -22,7 +15,7 @@ addi $r11, $r0, 0             #pipe 4 y center
 addi $r12, $r0, 0             #pipe 4 y gap height
 addi $r13, $r0, 0              #bird's y coord (top)
 addi $r14, $r0, 0 #bird's (right) x coord
-addi $r29, $r0, 0
+addi $r26, $r0, 0
 
 splash_loop:
 bne $r29, $r0, 1
@@ -43,7 +36,7 @@ addi $r10, $r0, 620             #pipe 4 x left edge
 addi $r11, $r0, 240             #pipe 4 y center
 addi $r12, $r0, 150             #pipe 4 y gap height
 addi $r13, $r0, 125              #bird's y coord (top)
-addi $r14, $r0, 94 #bird's (right) x coord 
+addi $r14, $r0, 94 #bird's (right) x coord
 addi $r22, $r0, 1 #r22 store speed of incoming pipe
 addi $r23, $r0, 0 #r23 stores how many game rates we've gone through 
 addi $r24, $r0, 3600 #$r24 stores number of game loops to go through before updating difficulty
@@ -55,39 +48,38 @@ bne $r28, $r0, 1 #branch to move barrier instrutions if interrupt
 
 j game_loop
 jal check_collisions
-jal move_items 
+jal move_items
 bne $r29, $r0, 1 #see if button is pressed- if it has been then skip j game loop and update bird position
 j game_loop
 jal button_pressed
 j game_loop
 
 move_items:
-addi $r23, $r23, 1  #update total count of game frame 
-addi $r26, $r26, 1 #update score
+addi $r23, $r23, 1  #update total count of game frame
 sub $r1, $r1, $r22 #update position of pipe 1
 sub $r4, $r4, $r22 #update position of pipe 2
 sub $r7, $r7, $r22 #update position of pipe 3
 sub $r10, $r10, $r22 #update position of pipe 4
-addi $r13, $r13, 2 #update bird position 
+addi $r13, $r13, 2 #update bird position
 add $r28, $r0, $r0 #(clear reg 28)
 addi $r15, $r1, 75 #store pipe 1 right edge in r15
 bne $r15, $r0, 1 # if pipe 1 right edge not at end of screen ignore next instruction
-addi $r1, $r0, 640 #if pipe 1 at end of screeen push pipe back 
+addi $r1, $r0, 640 #if pipe 1 at end of screeen push pipe back
 addi $r15, $r4, 75 #store pipe 2 right edge in r15
 bne $r15, $r0, 1 # if right edge not at end of screen ignore next instruction
-addi $r4, $r0, 640 #if pipe 2 at end of screeen push pipe back 
+addi $r4, $r0, 640 #if pipe 2 at end of screeen push pipe back
 addi $r15, $r7, 75 #store pipe 3 right edge in r15
 bne $r15, $r0, 1 # if right edge not at end of screen ignore next instruction
 addi $r7, $r0, 640 #if pipe 3 at end of screeen push pipe back
 addi $r15, $r10, 75 #store pipe 3 right edge in r15
 bne $r15, $r0, 1 # if right edge not at end of screen ignore next instruction
 addi $r10, $r0, 640 #if pipe 3 at end of screeen push pipe back
-add $r15, $r0, $r0 #clear r15 
+add $r15, $r0, $r0 #clear r15
 
 sw $ra, 1($r0) #store address of old link
 jal check_fall
 lw $ra, 1($r0) #load address of old link
-jr $ra 
+jr $ra
 
 button_pressed:
 addi $r13, $r13, -20
@@ -95,21 +87,21 @@ add $r29, $r0, $r0
 jr $ra
 
 #check_top:
-#blt $r13, $r0, 1 
+#blt $r13, $r0, 1
 #jr $ra
 #j game_end
 
 
-check_fall: 
+check_fall:
 addi $r16, $r0, 447 #use parameter to find position of bottom edge of bird (640-48=592)
 sub $r17, $r16, $r13 #find bottom edge of bird starting from bottom (592-pixel from top)
-blt $r0, $r17, 1 
+blt $r0, $r17, 1
 j game_end
-add $r16, $r0, $r0 #clear temp reg 
+add $r16, $r0, $r0 #clear temp reg
 add $r17, $r0, $r0 #clear temp reg
 jr $ra
 
-check_collisions: 
+check_collisions:
 sw $ra, 1($r0)
 jal check_collision1
 jal check_collision2
@@ -119,10 +111,10 @@ lw $ra, 1($r0)
 jr $ra
 
 
-check_collision1: 
-addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top) 
-sub $r17, $r2, $r3 #bottom edge of top pipe 
-blt  $r2, $r18, 2  #branch if below top of bottom pipe edge 
+check_collision1:
+addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top)
+sub $r17, $r2, $r3 #bottom edge of top pipe
+blt  $r2, $r18, 2  #branch if below top of bottom pipe edge
 blt $r13, $r17, 1 #branch if above bottom edge of top pipe
 jr $ra #jump back if not because collision not possible
 add $r18, $r0, $r0
@@ -141,10 +133,10 @@ blt  $r15, $r19, 1 #check if bird right edge is before pipe right point
 jr $ra
 j game_end
 
-check_collision2: 
-addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top) 
-sub $r17, $r5, $r6 #bottom edge of top pipe 
-blt  $r5, $r18, 2  #branch if below top of bottom pipe edge 
+check_collision2:
+addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top)
+sub $r17, $r5, $r6 #bottom edge of top pipe
+blt  $r5, $r18, 2  #branch if below top of bottom pipe edge
 blt $r13, $r17, 1 #branch if above bottom edge of top pipe
 jr $ra #jump back if not because collision not possible
 add $r18, $r0, $r0
@@ -163,10 +155,10 @@ blt  $r15, $r19, 1 #check if bird right edge is before pipe right point
 jr $ra
 j game_end
 
-check_collision3: 
-addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top) 
-sub $r17, $r8, $r9 #bottom edge of top pipe 
-blt  $r8, $r18, 2  #branch if below top of bottom pipe edge 
+check_collision3:
+addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top)
+sub $r17, $r8, $r9 #bottom edge of top pipe
+blt  $r8, $r18, 2  #branch if below top of bottom pipe edge
 blt $r13, $r17, 1 #branch if above bottom edge of top pipe
 jr $ra #jump back if not because collision not possible
 add $r18, $r0, $r0
@@ -185,10 +177,10 @@ blt  $r15, $r19, 1 #check if bird right edge is before pipe right point
 jr $ra
 j game_end
 
-check_collision4: 
-addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top) 
-sub $r17, $r11, $r12 #bottom edge of top pipe 
-blt  $r11, $r18, 2  #branch if below top of bottom pipe edge 
+check_collision4:
+addi $r18, $r13, 34 #bottom edge of bird to reg 18 (from top)
+sub $r17, $r11, $r12 #bottom edge of top pipe
+blt  $r11, $r18, 2  #branch if below top of bottom pipe edge
 blt $r13, $r17, 1 #branch if above bottom edge of top pipe
 jr $ra #jump back if not because collision not possible
 add $r18, $r0, $r0
@@ -208,13 +200,13 @@ jr $ra
 j game_end
 
 
-game_end: 
+game_end:
 
-add $r15, $r0, $r0 #clear temp reg 
-add $r16, $r0, $r0 #clear temp reg 
+add $r15, $r0, $r0 #clear temp reg
+add $r16, $r0, $r0 #clear temp reg
 add $r17, $r0, $r0 #clear temp reg
-add $r18, $r0, $r0 #clear temp reg 
-add $r19, $r0, $r0 #clear temp reg 
+add $r18, $r0, $r0 #clear temp reg
+add $r19, $r0, $r0 #clear temp reg
 add $r20, $r0, $r0 #clear temp reg
 add $r21, $r0, $r0 #clear temp reg
 j splash_init #jump back to initial state
