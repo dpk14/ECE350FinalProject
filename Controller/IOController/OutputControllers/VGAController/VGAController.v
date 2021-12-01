@@ -153,7 +153,7 @@ module VGAController(
                     .SCREEN_WIDTH(SCREEN_WIDTH), .BITS_PER_COLOR(BITS_PER_COLOR))
         scoreDisplay(.inside_score(inside_score), .scoreData(scoreData),
                      .SCORE_OFFSET(game_underway ? SCORE_OFFSET_GAME : SCORE_OFFSET_SPLASH),
-                     .score(!game_underway ? high_score : current_score),
+                     .score(!game_underway ? high_score : current_score>>>7),
                      .clk(clk), .x(x), .y(y));
 
 	// Quickly assign the output colors to their channels using concatenation

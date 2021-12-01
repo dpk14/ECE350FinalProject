@@ -17,25 +17,33 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 29560
+INFO: [Synth 8-7075] Helper process launched with PID 36668
 WARNING: [Synth 8-6901] identifier 'BITS_PER_COLOR' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:6]
 WARNING: [Synth 8-6901] identifier 'PALETTE_ADDRESS_WIDTH' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:12]
-WARNING: [Synth 8-992] can_jump is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/InputController.v:59]
-WARNING: [Synth 8-992] inside_bottom_shaft is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:58]
+WARNING: [Synth 8-992] can_jump is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/InputController.v:42]
+WARNING: [Synth 8-992] inside_bottom_shaft is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:49]
+WARNING: [Synth 8-992] NUM_IMG_OFFSET_HUNDREDS is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:62]
+WARNING: [Synth 8-992] NUM_IMG_OFFSET_TENS is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:75]
+WARNING: [Synth 8-992] NUM_IMG_OFFSET_ONES is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:88]
+WARNING: [Synth 8-992] inside_hundreds_place is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:104]
+WARNING: [Synth 8-992] inside_tens_place is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:109]
+WARNING: [Synth 8-992] game_underway is already implicitly declared earlier [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:161]
+WARNING: [Synth 8-6901] identifier 'TITLE_TOP_OFFSET' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:65]
+WARNING: [Synth 8-6901] identifier 'TITLE_HEIGHT' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:65]
 WARNING: [Synth 8-6901] identifier 'is_addi' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/execute.v:91]
 WARNING: [Synth 8-6901] identifier 'sign_extended_immediate' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/execute.v:91]
 WARNING: [Synth 8-6901] identifier 'sign_extended_target' is used before its declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/execute.v:126]
 WARNING: [Synth 8-1935] empty port in module declaration [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/memory.v:22]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.758 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1013.035 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Main' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Main.v:1]
 	Parameter MHz bound to: 1000000 - type: integer 
 	Parameter SYSTEM_FREQ bound to: 100000000 - type: integer 
 	Parameter PROC_FREQ bound to: 50000000 - type: integer 
 	Parameter GAME_FRAME_RT bound to: 64'b0000000000000000000000000000000000000000000000000000000000111100 
-INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/BuildingBlocks/clock_divider.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/BuildingBlocks/clock_divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/clock_divider.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/clock_divider.v:1]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/CPU.v:27]
 	Parameter INSTR_FILE bound to: ../../../Assembly/game - type: string 
 INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/processor.v:20]
@@ -138,7 +146,7 @@ INFO: [Synth 8-6155] done synthesizing module 'processor' (46#1) [C:/Users/joshr
 INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/ROM.v:3]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
-	Parameter DEPTH bound to: 4096 - type: integer 
+	Parameter DEPTH bound to: 512 - type: integer 
 	Parameter MEMFILE bound to: 208'b0010111000101110001011110010111000101110001011110010111000101110001011110100000101110011011100110110010101101101011000100110110001111001001011110110011101100001011011010110010100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file '../../../Assembly/game.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/ROM.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'ROM' (47#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/ROM.v:3]
@@ -171,7 +179,7 @@ WARNING: [Synth 8-7023] instance 'RegisterFile' of module 'my_regfile' has 41 co
 INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/RAM.v:2]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
-	Parameter DEPTH bound to: 100 - type: integer 
+	Parameter DEPTH bound to: 64 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (52#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/RAM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (53#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/CPU.v:27]
 INFO: [Synth 8-6157] synthesizing module 'InputController' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/InputController.v:1]
@@ -181,10 +189,10 @@ INFO: [Synth 8-6157] synthesizing module 'InputController' [C:/Users/joshr/Docum
 INFO: [Synth 8-6157] synthesizing module 'JumpController' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/JumpController.v:1]
 	Parameter EmpiricalParam bound to: 10 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'JumpController' (54#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/JumpController.v:1]
-INFO: [Synth 8-6157] synthesizing module 'jump_key_input_instructionbuilder' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/InstructionBuilder/jump_key_input_instructionbuilder.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'jump_key_input_instructionbuilder' (55#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/InstructionBuilder/jump_key_input_instructionbuilder.v:3]
-INFO: [Synth 8-6157] synthesizing module 'frame_rdy_instructionbuilder' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/InstructionBuilder/frame_rdy_instructionbuilder.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'frame_rdy_instructionbuilder' (56#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/InstructionBuilder/frame_rdy_instructionbuilder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'jump_key_input_instructionbuilder' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/jump_key_input_instructionbuilder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'jump_key_input_instructionbuilder' (55#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/jump_key_input_instructionbuilder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'frame_rdy_instructionbuilder' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/frame_rdy_instructionbuilder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'frame_rdy_instructionbuilder' (56#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/frame_rdy_instructionbuilder.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'InputController' (57#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/InputController.v:1]
 INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:2]
 	Parameter MHz bound to: 1000000 - type: integer 
@@ -197,6 +205,15 @@ INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/joshr/Documen
 	Parameter BIRD_WIDTH bound to: 47 - type: integer 
 	Parameter BIRD_HEIGHT bound to: 33 - type: integer 
 	Parameter BIRD_LEFT_EDGE bound to: 60 - type: integer 
+	Parameter NUM_IMG_WIDTH bound to: 378 - type: integer 
+	Parameter NUM_HEIGHT bound to: 45 - type: integer 
+	Parameter SCORE_OFFSET_GAME bound to: 40 - type: integer 
+	Parameter SCORE_OFFSET_SPLASH bound to: 290 - type: integer 
+	Parameter SCORE_TEXT_WIDTH bound to: 201 - type: integer 
+	Parameter SCORE_TEXT_HEIGHT bound to: 43 - type: integer 
+	Parameter TITLE_WIDTH bound to: 370 - type: integer 
+	Parameter TITLE_HEIGHT bound to: 95 - type: integer 
+	Parameter TITLE_TOP_OFFSET bound to: 50 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'VGATimingGenerator' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGATimingGenerator.v:2]
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter WIDTH bound to: 640 - type: integer 
@@ -243,12 +260,88 @@ INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized0' (59#1) [
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'image' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6157] synthesizing module 'TitleDisplay' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/TitleDisplay.v:1]
+	Parameter SCREEN_WIDTH bound to: 640 - type: integer 
+	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter TITLE_WIDTH bound to: 370 - type: integer 
+	Parameter TITLE_HEIGHT bound to: 95 - type: integer 
+	Parameter TITLE_TOP_OFFSET bound to: 50 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized0' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+	Parameter WIDTH bound to: 370 - type: integer 
+	Parameter HEIGHT bound to: 95 - type: integer 
+	Parameter IMG_FILE bound to: title_image.mem - type: string 
+	Parameter CLR_FILE bound to: title_colors.mem - type: string 
+	Parameter FILES_PATH bound to: (null) - type: string 
+	Parameter PIXEL_COUNT bound to: 35150 - type: integer 
+	Parameter PIXEL_ADDRESS_WIDTH bound to: 17 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
+	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized1' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 35150 - type: integer 
+	Parameter MEMFILE bound to: 128'b00000000011101000110100101110100011011000110010101011111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'title_image.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized1' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized2' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 136'b0000000001110100011010010111010001101100011001010101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'title_colors.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized2' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized0' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'TitleDisplay' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/TitleDisplay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'HiScoreLabelDisplay' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/HiScoreLabelDisplay.v:1]
+	Parameter SCREEN_WIDTH bound to: 640 - type: integer 
+	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter LABEL_WIDTH bound to: 201 - type: integer 
+	Parameter LABEL_HEIGHT bound to: 43 - type: integer 
+	Parameter LABEL_TOP_OFFSET bound to: 195 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized1' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+	Parameter WIDTH bound to: 201 - type: integer 
+	Parameter HEIGHT bound to: 43 - type: integer 
+	Parameter IMG_FILE bound to: scoretext_image.mem - type: string 
+	Parameter CLR_FILE bound to: scoretext_colors.mem - type: string 
+	Parameter FILES_PATH bound to: (null) - type: string 
+	Parameter PIXEL_COUNT bound to: 8643 - type: integer 
+	Parameter PIXEL_ADDRESS_WIDTH bound to: 15 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
+	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized3' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 15 - type: integer 
+	Parameter DEPTH bound to: 8643 - type: integer 
+	Parameter MEMFILE bound to: 160'b0000000001110011011000110110111101110010011001010111010001100101011110000111010001011111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'scoretext_image.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized3' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized4' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 168'b000000000111001101100011011011110111001001100101011101000110010101111000011101000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'scoretext_colors.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized4' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized1' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'HiScoreLabelDisplay' (62#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/HiScoreLabelDisplay.v:1]
 INFO: [Synth 8-6157] synthesizing module 'BirdDisplay' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v:1]
 	Parameter BIRD_LEFT_EDGE bound to: 60 - type: integer 
 	Parameter BIRD_WIDTH bound to: 47 - type: integer 
 	Parameter BIRD_HEIGHT bound to: 33 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'image__parameterized0' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized2' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
 	Parameter WIDTH bound to: 47 - type: integer 
 	Parameter HEIGHT bound to: 33 - type: integer 
 	Parameter IMG_FILE bound to: bird_image.mem - type: string 
@@ -259,32 +352,32 @@ INFO: [Synth 8-6157] synthesizing module 'image__parameterized0' [C:/Users/joshr
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized1' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized5' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 12 - type: integer 
 	Parameter DEPTH bound to: 1551 - type: integer 
 	Parameter MEMFILE bound to: 120'b000000000110001001101001011100100110010001011111011010010110110101100001011001110110010100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'bird_image.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized1' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized5' (62#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
 WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized2' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized6' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
 	Parameter DEPTH bound to: 256 - type: integer 
 	Parameter MEMFILE bound to: 128'b00000000011000100110100101110010011001000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'bird_colors.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized2' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized6' (62#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'image__parameterized0' (60#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'BirdDisplay' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized2' (62#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BirdDisplay' (63#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v:1]
 INFO: [Synth 8-6157] synthesizing module 'PipeDisplay' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:1]
 	Parameter SCREEN_HEIGHT bound to: 480 - type: integer 
 	Parameter PIPE_WIDTH bound to: 57 - type: integer 
 	Parameter PIPE_CAP_HEIGHT bound to: 0 - type: integer 
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'image__parameterized1' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized3' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
 	Parameter WIDTH bound to: 57 - type: integer 
 	Parameter HEIGHT bound to: 480 - type: integer 
 	Parameter IMG_FILE bound to: pipe_shaft_image.mem - type: string 
@@ -295,41 +388,78 @@ INFO: [Synth 8-6157] synthesizing module 'image__parameterized1' [C:/Users/joshr
 	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
 	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
 	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized3' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized7' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 16 - type: integer 
 	Parameter DEPTH bound to: 27360 - type: integer 
 	Parameter MEMFILE bound to: 168'b000000000111000001101001011100000110010101011111011100110110100001100001011001100111010001011111011010010110110101100001011001110110010100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'pipe_shaft_image.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized3' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized7' (63#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
 WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
-INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized4' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized8' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
 	Parameter DEPTH bound to: 256 - type: integer 
 	Parameter MEMFILE bound to: 176'b00000000011100000110100101110000011001010101111101110011011010000110000101100110011101000101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'pipe_shaft_colors.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized4' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized8' (63#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
 WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
 WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'image__parameterized1' (61#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'PipeDisplay' (62#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'VGAController' (63#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Main' (64#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Main.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized3' (63#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PipeDisplay' (64#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ScoreDisplay' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:1]
+	Parameter SCREEN_WIDTH bound to: 640 - type: integer 
+	Parameter NUM_IMG_WIDTH bound to: 378 - type: integer 
+	Parameter NUM_HEIGHT bound to: 45 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter NUM_WIDTH bound to: 37 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image__parameterized4' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+	Parameter WIDTH bound to: 378 - type: integer 
+	Parameter HEIGHT bound to: 45 - type: integer 
+	Parameter IMG_FILE bound to: numbers_image.mem - type: string 
+	Parameter CLR_FILE bound to: numbers_colors.mem - type: string 
+	Parameter FILES_PATH bound to: (null) - type: string 
+	Parameter PIXEL_COUNT bound to: 17010 - type: integer 
+	Parameter PIXEL_ADDRESS_WIDTH bound to: 16 - type: integer 
+	Parameter BITS_PER_COLOR bound to: 12 - type: integer 
+	Parameter PALETTE_COLOR_COUNT bound to: 256 - type: integer 
+	Parameter PALETTE_ADDRESS_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized9' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 16 - type: integer 
+	Parameter DEPTH bound to: 17010 - type: integer 
+	Parameter MEMFILE bound to: 144'b000000000110111001110101011011010110001001100101011100100111001101011111011010010110110101100001011001110110010100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'numbers_image.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized9' (64#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ImageData' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:26]
+INFO: [Synth 8-6157] synthesizing module 'IMG_RAM__parameterized10' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter MEMFILE bound to: 152'b00000000011011100111010101101101011000100110010101110010011100110101111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
+INFO: [Synth 8-3876] $readmem data file 'numbers_colors.mem' is read successfully [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IMG_RAM__parameterized10' (64#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v:2]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'IMG_RAM' is unconnected for instance 'ColorPalette' [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'IMG_RAM' has 5 connections declared, but only 4 given [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'image__parameterized4' (64#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ScoreDisplay' (65#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'VGAController' (66#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Main' (67#1) [C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Main.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1036.949 ; gain = 23.191
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1070.715 ; gain = 57.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1036.949 ; gain = 23.191
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1070.715 ; gain = 57.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1036.949 ; gain = 23.191
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1070.715 ; gain = 57.680
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.270 . Memory (MB): peak = 1036.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1070.715 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -340,31 +470,30 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1109.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1129.008 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1109.227 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1129.008 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1109.227 ; gain = 95.469
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1129.008 ; gain = 115.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1109.227 ; gain = 95.469
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1129.008 ; gain = 115.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1109.227 ; gain = 95.469
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1129.008 ; gain = 115.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1109.227 ; gain = 95.469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1129.008 ; gain = 115.973
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'vga_controller/background' (image) to 'vga_controller/splash'
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -372,11 +501,12 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   65 Bit       Adders := 5     
 	   3 Input   64 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 2     
-	   3 Input   32 Bit       Adders := 6     
-	   4 Input   32 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 32    
+	   3 Input   32 Bit       Adders := 9     
+	   4 Input   32 Bit       Adders := 6     
 	   2 Input   20 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 6     
+	   2 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 2     
 	   3 Input    9 Bit       Adders := 4     
 	   2 Input    6 Bit       Adders := 2     
 	   2 Input    3 Bit       Adders := 1     
@@ -389,39 +519,45 @@ Detailed RTL Component Info :
 	               64 Bit    Registers := 3     
 	               32 Bit    Registers := 5     
 	               31 Bit    Registers := 1     
-	               12 Bit    Registers := 6     
+	               12 Bit    Registers := 9     
 	               10 Bit    Registers := 2     
-	                9 Bit    Registers := 6     
+	                9 Bit    Registers := 9     
 	                6 Bit    Registers := 2     
 	                1 Bit    Registers := 1517  
 +---Multipliers : 
 	              32x32  Multipliers := 1     
+	               9x32  Multipliers := 2     
+	               8x32  Multipliers := 1     
 	               6x32  Multipliers := 5     
 +---RAMs : 
 	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
+	             308K Bit	(35150 X 9 bit)          RAMs := 1     
 	             240K Bit	(27360 X 9 bit)          RAMs := 4     
+	             149K Bit	(17010 X 9 bit)          RAMs := 1     
+	              75K Bit	(8643 X 9 bit)          RAMs := 1     
 	              13K Bit	(1551 X 9 bit)          RAMs := 1     
-	               3K Bit	(256 X 12 bit)          RAMs := 6     
-	               3K Bit	(100 X 32 bit)          RAMs := 1     
+	               3K Bit	(256 X 12 bit)          RAMs := 9     
+	               2K Bit	(64 X 32 bit)          RAMs := 1     
 +---ROMs : 
 	                    ROMs := 1     
 +---Muxes : 
 	   2 Input   65 Bit        Muxes := 4     
 	   3 Input   65 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 55    
+	   2 Input   32 Bit        Muxes := 58    
 	   2 Input   31 Bit        Muxes := 9     
 	   2 Input   30 Bit        Muxes := 9     
 	   2 Input   28 Bit        Muxes := 9     
 	   2 Input   24 Bit        Muxes := 9     
 	   2 Input   20 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 21    
-	   2 Input   12 Bit        Muxes := 5     
-	   2 Input   10 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 8     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 12    
 	   2 Input    6 Bit        Muxes := 2     
 	   3 Input    6 Bit        Muxes := 1     
+	  11 Input    5 Bit        Muxes := 3     
 	   2 Input    5 Bit        Muxes := 26    
 	   2 Input    4 Bit        Muxes := 12    
 	   4 Input    3 Bit        Muxes := 1     
@@ -444,6 +580,14 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+DSP Report: Generating DSP imgAddress1, operation Mode is: A*(B:0x172).
+DSP Report: operator imgAddress1 is absorbed into DSP imgAddress1.
+DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff79).
+DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
+DSP Report: Generating DSP imgAddress1, operation Mode is: A*(B:0xc9).
+DSP Report: operator imgAddress1 is absorbed into DSP imgAddress1.
+DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff25).
+DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: Generating DSP imgAddress1, operation Mode is: A*(B:0x2f).
 DSP Report: operator imgAddress1 is absorbed into DSP imgAddress1.
 DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffffc4).
@@ -476,6 +620,8 @@ DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN+(A:0x0):B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: Generating DSP imgAddress0, operation Mode is: PCIN-(A:0x0):B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
+DSP Report: Generating DSP imgAddress2, operation Mode is: A*(B:0x17a).
+DSP Report: operator imgAddress2 is absorbed into DSP imgAddress2.
 DSP Report: Generating DSP imgAddress0, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress0.
 DSP Report: operator imgAddress1 is absorbed into DSP imgAddress0.
@@ -494,65 +640,76 @@ DSP Report: register multdiv/mult/real_prod_reg is absorbed into DSP multdiv/mul
 DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
 DSP Report: operator multdiv/mult/real_prod0 is absorbed into DSP multdiv/mult/real_prod_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1240.582 ; gain = 226.824
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 1326.141 ; gain = 313.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
-ROM: Preliminary Mapping	Report
-+------------+-------------------------+---------------+----------------+
-|Module Name | RTL Object              | Depth x Width | Implemented As | 
-+------------+-------------------------+---------------+----------------+
-|Main        | CPU/InstMem/dataOut_reg | 4096x31       | Block RAM      | 
-+------------+-------------------------+---------------+----------------+
-
-
 Block RAM: Preliminary Mapping	Report (see note below)
-+-------------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name              | RTL Object                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-------------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|IMG_RAM:                 | MemoryArray_reg             | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
-|IMG_RAM__parameterized0: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized1: | MemoryArray_reg             | 1 K x 9(NO_CHANGE)     | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized2: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|Main                     | CPU/ProcMem/MemoryArray_reg | 100 x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-+-------------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|IMG_RAM:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|IMG_RAM__parameterized1: | MemoryArray_reg | 34 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 18     | 
+|IMG_RAM__parameterized7: | MemoryArray_reg | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
+|IMG_RAM__parameterized7: | MemoryArray_reg | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
+|IMG_RAM__parameterized7: | MemoryArray_reg | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
+|IMG_RAM__parameterized9: | MemoryArray_reg | 16 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
+Distributed RAM: Preliminary Mapping	Report (see note below)
++-------------------------------+---------------------------------------------------------------+-----------+----------------------+----------------------------------------------------------+
+|Module Name                    | RTL Object                                                    | Inference | Size (Depth x Width) | Primitives                                               | 
++-------------------------------+---------------------------------------------------------------+-----------+----------------------+----------------------------------------------------------+
+|vga_controlleri_1/scoreDisplay | pipeImage/ColorPalette/MemoryArray_reg                        | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | background/ColorPalette/MemoryArray_reg                       | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | titleDisplay/splash/ColorPalette/MemoryArray_reg              | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe2Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe3Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe4Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | hiscoreLabelDisplay/hiscoreLabel/ImageData/MemoryArray_reg    | Implied   | 16 K x 9             | RAM16X1S x 9	RAM64X1S x 9	RAM128X1S x 9	RAM256X1S x 297	 | 
+|Main                           | hiscoreLabelDisplay/hiscoreLabel/ColorPalette/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | birdDisplay/birdImage/ImageData/MemoryArray_reg               | Implied   | 2 K x 9              | RAM16X1S x 9	RAM256X1S x 54	                             | 
+|Main                           | birdDisplay/birdImage/ColorPalette/MemoryArray_reg            | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe1Display/pipeImage/ImageData/MemoryArray_reg              | Implied   | 32 K x 9             | RAM32X1S x 9	RAM64X1S x 9	RAM128X1S x 9	RAM256X1S x 954	 | 
+|Main                           | pipe1Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | CPU/ProcMem/MemoryArray_reg                                   | Implied   | 64 x 32              | RAM64X1S x 32	                                           | 
++-------------------------------+---------------------------------------------------------------+-----------+----------------------+----------------------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
 DSP: Preliminary Mapping	Report (see note below)
-+--------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name   | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|BirdDisplay   | A*(B:0x2f)                        | 11     | 6      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|BirdDisplay   | PCIN+(A:0x0):B+(C:0xffffffffffc4) | 30     | 10     | 7      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|PipeDisplay   | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
-|PipeDisplay   | PCIN+(A:0x0):B                    | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
-|PipeDisplay   | PCIN+(A:0x0):B                    | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
-|PipeDisplay   | PCIN+(A:0x0):B                    | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
-|PipeDisplay   | PCIN+(A:0x0):B                    | 30     | 10     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PipeDisplay   | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|VGAController | C+(A:0x280)*B                     | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|multdiv_stage | A*B                               | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multdiv_stage | (PCIN>>17)+A*B                    | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|multdiv_stage | A*B                               | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multdiv_stage | (PCIN>>17)+A*B                    | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-+--------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++--------------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|TitleDisplay        | A*(B:0x172)                       | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|TitleDisplay        | PCIN+(A:0x0):B+(C:0xffffffffff79) | 30     | 10     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|HiScoreLabelDisplay | A*(B:0xc9)                        | 14     | 8      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HiScoreLabelDisplay | PCIN+(A:0x0):B+(C:0xffffffffff25) | 30     | 10     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|BirdDisplay         | A*(B:0x2f)                        | 11     | 6      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BirdDisplay         | PCIN+(A:0x0):B+(C:0xffffffffffc4) | 30     | 10     | 7      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|PipeDisplay         | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|PipeDisplay         | PCIN+(A:0x0):B                    | 30     | 11     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|PipeDisplay         | PCIN+(A:0x0):B                    | 30     | 11     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|PipeDisplay         | PCIN+(A:0x0):B                    | 30     | 11     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | ((D or 0)+(0 or A))*(B:0x39)      | 9      | 6      | -      | 15     | 15     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
+|PipeDisplay         | PCIN+(A:0x0):B                    | 30     | 11     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PipeDisplay         | PCIN-(A:0x0):B                    | 30     | 15     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ScoreDisplay        | A*(B:0x17a)                       | 15     | 9      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|VGAController       | C+(A:0x280)*B                     | 9      | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|multdiv_stage       | A*B                               | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multdiv_stage       | (PCIN>>17)+A*B                    | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|multdiv_stage       | A*B                               | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|multdiv_stage       | (PCIN>>17)+A*B                    | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++--------------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -562,36 +719,49 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 1240.582 ; gain = 226.824
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:35 . Memory (MB): peak = 1326.141 ; gain = 313.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 1240.582 ; gain = 226.824
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:35 . Memory (MB): peak = 1326.141 ; gain = 313.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping	Report
-+-------------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name              | RTL Object                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-------------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|IMG_RAM:                 | MemoryArray_reg             | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
-|IMG_RAM__parameterized0: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized1: | MemoryArray_reg             | 1 K x 9(NO_CHANGE)     | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized2: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|IMG_RAM__parameterized3: | MemoryArray_reg             | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
-|IMG_RAM__parameterized4: | MemoryArray_reg             | 256 x 12(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-|Main                     | CPU/ProcMem/MemoryArray_reg | 100 x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-+-------------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|IMG_RAM:                 | MemoryArray_reg | 300 K x 9(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 90     | 
+|IMG_RAM__parameterized1: | MemoryArray_reg | 34 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 18     | 
+|IMG_RAM__parameterized7: | MemoryArray_reg | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
+|IMG_RAM__parameterized7: | MemoryArray_reg | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
+|IMG_RAM__parameterized7: | MemoryArray_reg | 26 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
+|IMG_RAM__parameterized9: | MemoryArray_reg | 16 K x 9(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 9      | 
++-------------------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++-------------------------------+---------------------------------------------------------------+-----------+----------------------+----------------------------------------------------------+
+|Module Name                    | RTL Object                                                    | Inference | Size (Depth x Width) | Primitives                                               | 
++-------------------------------+---------------------------------------------------------------+-----------+----------------------+----------------------------------------------------------+
+|vga_controlleri_1/scoreDisplay | pipeImage/ColorPalette/MemoryArray_reg                        | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | background/ColorPalette/MemoryArray_reg                       | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | titleDisplay/splash/ColorPalette/MemoryArray_reg              | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe2Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe3Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe4Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | hiscoreLabelDisplay/hiscoreLabel/ImageData/MemoryArray_reg    | Implied   | 16 K x 9             | RAM16X1S x 9	RAM64X1S x 9	RAM128X1S x 9	RAM256X1S x 297	 | 
+|Main                           | hiscoreLabelDisplay/hiscoreLabel/ColorPalette/MemoryArray_reg | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | birdDisplay/birdImage/ImageData/MemoryArray_reg               | Implied   | 2 K x 9              | RAM16X1S x 9	RAM256X1S x 54	                             | 
+|Main                           | birdDisplay/birdImage/ColorPalette/MemoryArray_reg            | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | pipe1Display/pipeImage/ImageData/MemoryArray_reg              | Implied   | 32 K x 9             | RAM32X1S x 9	RAM64X1S x 9	RAM128X1S x 9	RAM256X1S x 954	 | 
+|Main                           | pipe1Display/pipeImage/ColorPalette/MemoryArray_reg           | Implied   | 256 x 12             | RAM256X1S x 12	                                          | 
+|Main                           | CPU/ProcMem/MemoryArray_reg                                   | Implied   | 64 x 32              | RAM64X1S x 32	                                           | 
++-------------------------------+---------------------------------------------------------------+-----------+----------------------+----------------------------------------------------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -639,53 +809,48 @@ INFO: [Synth 8-7052] The timing for the instance vga_controller/background/Image
 INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/background/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/birdDisplay/birdImage/ImageData/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/birdDisplay/birdImage/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe1Display/pipeImage/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe3Display/pipeImage/ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CPU/ProcMem/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CPU/ProcMem/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CPU/InstMem/dataOut_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CPU/InstMem/dataOut_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CPU/InstMem/dataOut_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CPU/InstMem/dataOut_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/titleDisplay/splash/ImageData/MemoryArray_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe2Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/pipe4Display/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vga_controller/scoreDisplay/pipeImage/ImageData/MemoryArray_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:38 ; elapsed = 00:01:40 . Memory (MB): peak = 1298.992 ; gain = 285.234
+Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:01:42 . Memory (MB): peak = 1376.430 ; gain = 363.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -703,37 +868,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:01:46 . Memory (MB): peak = 1304.180 ; gain = 290.422
+Finished IO Insertion : Time (s): cpu = 00:01:47 ; elapsed = 00:01:49 . Memory (MB): peak = 1381.574 ; gain = 368.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:01:46 . Memory (MB): peak = 1304.180 ; gain = 290.422
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:47 ; elapsed = 00:01:49 . Memory (MB): peak = 1381.574 ; gain = 368.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:01:47 . Memory (MB): peak = 1304.180 ; gain = 290.422
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:49 ; elapsed = 00:01:51 . Memory (MB): peak = 1381.574 ; gain = 368.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:01:47 . Memory (MB): peak = 1304.180 ; gain = 290.422
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1381.574 ; gain = 368.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 1304.328 ; gain = 290.570
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1382.672 ; gain = 369.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 1304.328 ; gain = 290.570
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1382.672 ; gain = 369.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -746,45 +911,56 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     2|
-|2     |CARRY4   |   242|
-|3     |DSP48E1  |    19|
-|10    |LUT1     |   132|
-|11    |LUT2     |   943|
-|12    |LUT3     |   299|
-|13    |LUT4     |   460|
-|14    |LUT5     |   674|
-|15    |LUT6     |  1755|
-|16    |MUXF7    |     4|
-|17    |RAMB18E1 |     6|
-|22    |RAMB36E1 |   100|
-|51    |FDRE     |  1911|
-|52    |IBUF     |     2|
-|53    |OBUF     |    14|
-+------+---------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |   951|
+|3     |DSP48E1   |    24|
+|10    |LUT1      |   898|
+|11    |LUT2      |  1390|
+|12    |LUT3      |  1668|
+|13    |LUT4      |  1961|
+|14    |LUT5      |  1245|
+|15    |LUT6      |  2314|
+|16    |MUXF7     |   146|
+|17    |MUXF8     |    32|
+|18    |RAM128X1S |    16|
+|19    |RAM16X1S  |    16|
+|20    |RAM256X1S |  1268|
+|21    |RAM32X1S  |     8|
+|22    |RAM64X1S  |    48|
+|23    |RAMB36E1  |   120|
+|72    |FDRE      |  2103|
+|73    |IBUF      |     2|
+|74    |OBUF      |    14|
++------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:01:47 . Memory (MB): peak = 1304.328 ; gain = 290.570
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1382.672 ; gain = 369.637
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:31 ; elapsed = 00:01:43 . Memory (MB): peak = 1304.328 ; gain = 218.293
-Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:01:48 . Memory (MB): peak = 1304.328 ; gain = 290.570
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:36 ; elapsed = 00:01:48 . Memory (MB): peak = 1382.672 ; gain = 311.344
+Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1382.672 ; gain = 369.637
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 1317.578 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 371 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.661 . Memory (MB): peak = 1396.379 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2629 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1317.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1398.379 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1356 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 16 instances
+  RAM16X1S => RAM32X1S (RAMS32): 16 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 1268 instances
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 48 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-250 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+274 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:56 ; elapsed = 00:01:58 . Memory (MB): peak = 1317.578 ; gain = 303.820
+synth_design: Time (s): cpu = 00:02:05 ; elapsed = 00:02:08 . Memory (MB): peak = 1398.379 ; gain = 385.344
 INFO: [Common 17-1381] The checkpoint 'C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/bird_project/bird_project.runs/synth_1/Main.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1398.379 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 29 18:30:03 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 30 21:36:03 2021...
