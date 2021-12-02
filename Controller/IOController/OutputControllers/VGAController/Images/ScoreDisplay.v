@@ -35,7 +35,10 @@ module ScoreDisplay #(parameter SCREEN_WIDTH = 640,
 
 
     wire [31:0] score_minus_100, score_minus_200, score_minus_300, score_minus_400, score_minus_500, score_minus_600, score_minus_700,
-         score_minus_800, score_minus_900;
+         score_minus_800, score_minus_900,
+         score_ten_minus_10, score_ten_minus_20, score_ten_minus_30, score_ten_minus_40, score_ten_minus_50, score_ten_minus_60, score_ten_minus_70,
+                  score_ten_minus_80, score_ten_minus_90;
+
 
     assign score_minus_100 = score - 100;
     assign score_minus_200 = score - 200;
@@ -72,31 +75,42 @@ module ScoreDisplay #(parameter SCREEN_WIDTH = 640,
                                     score_minus_900 < 100 ? 9:
                                     0);
 
+    assign score_ten_minus_10 = score_tens - 10;
+    assign score_ten_minus_20 = score_tens - 20;
+    assign score_ten_minus_30 = score_tens - 30;
+    assign score_ten_minus_40 = score_tens - 40;
+    assign score_ten_minus_50 = score_tens - 50;
+    assign score_ten_minus_60 = score_tens - 60;
+    assign score_ten_minus_70 = score_tens - 70;
+    assign score_ten_minus_80 = score_tens - 80;
+    assign score_ten_minus_90 = score_tens - 90;
+
+    wire[31:0] score_ones = score_tens < 10 ? score_tens:
+                            score_ten_minus_10 < 10 ? score_ten_minus_10:
+                            score_ten_minus_20 < 10 ? score_ten_minus_20:
+                            score_ten_minus_30 < 10 ? score_ten_minus_30:
+                            score_ten_minus_40 < 10 ? score_ten_minus_40:
+                            score_ten_minus_50 < 10 ? score_ten_minus_50:
+                            score_ten_minus_60 < 10 ? score_ten_minus_60:
+                            score_ten_minus_70 < 10 ? score_ten_minus_70:
+                            score_ten_minus_80 < 10 ? score_ten_minus_80:
+                            score_ten_minus_90 < 10 ? score_ten_minus_90:
+                            score_tens;
+
     wire[31:0] NUM_IMG_OFFSET_TENS = NUM_WIDTH*(
                                     score_tens < 10 ? 0:
-                                    score_tens - 10 < 10 ? 1:
-                                    score_tens - 20 < 10 ? 2:
-                                    score_tens - 30 < 10 ? 3:
-                                    score_tens - 40 < 10 ? 4:
-                                    score_tens - 50 < 10 ? 5:
-                                    score_tens - 60 < 10 ? 6:
-                                    score_tens - 70 < 10 ? 7:
-                                    score_tens - 80 < 10 ? 8:
-                                    score_tens - 90 < 10 ? 9:
+                                    score_ten_minus_10 < 10 ? 1:
+                                    score_ten_minus_20 < 10 ? 2:
+                                    score_ten_minus_30 < 10 ? 3:
+                                    score_ten_minus_40 < 10 ? 4:
+                                    score_ten_minus_50 < 10 ? 5:
+                                    score_ten_minus_60 < 10 ? 6:
+                                    score_ten_minus_70 < 10 ? 7:
+                                    score_ten_minus_80 < 10 ? 8:
+                                    score_ten_minus_90 < 10 ? 9:
                                     0);
 
-    wire[31:0] NUM_IMG_OFFSET_ONES = NUM_WIDTH*(
-                                    score == 0 || (score > 10 && score%10 == 0) ? 0:
-                                    score == 1 || (score - 1 > 10 && (score - 1)%10 == 0) ? 1:
-                                    score == 2 || (score - 2 > 10 && (score - 2)%10 == 0) ? 2:
-                                    score == 3 || (score - 3 > 10 && (score - 3)%10 == 0) ? 3:
-                                    score == 4 || (score - 4 > 10 && (score - 4)%10 == 0) ? 4:
-                                    score == 5 || (score - 5 > 10 && (score - 5)%10 == 0) ? 5:
-                                    score == 6 || (score - 6 > 10 && (score - 6)%10 == 0) ? 6:
-                                    score == 7 || (score - 7 > 10 && (score - 7)%10 == 0) ? 7:
-                                    score == 8 || (score - 8 > 10 && (score - 8)%10 == 0) ? 8:
-                                    score == 9 || (score - 9 > 10 && (score - 9)%10 == 0) ? 9:
-                                    0);
+    wire[31:0] NUM_IMG_OFFSET_ONES = NUM_WIDTH*(score_ones);
 
     wire inside_y_range = y >= SCORE_OFFSET &&
                           y <= SCORE_OFFSET + NUM_HEIGHT;
