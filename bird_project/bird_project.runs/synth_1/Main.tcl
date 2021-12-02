@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -86,10 +87,17 @@ set_property ip_output_repo {c:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem {{C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Assembly/game.mem}}
+read_mem {
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Assembly/game.mem}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Im2MIF/tiles/colors.mif}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/im-mifs/pipe_shaft_colors.mif}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Im2MIF/tiles/title.mif}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/im-mifs/pipe_shaft.mif}
+}
 read_verilog -library xil_defaultlib {
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/BirdDisplay.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/CPU.v}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/HiScoreLabelDisplay.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/MemoryFiles/IMG_RAM.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/Image.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/InputController.v}
@@ -100,6 +108,8 @@ read_verilog -library xil_defaultlib {
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/PipeDisplay.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/RAM.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/Memory/ROM.v}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/ScoreDisplay.v}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/Images/TitleDisplay.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGAController.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/OutputControllers/VGAController/VGATimingGenerator.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/add.v}
@@ -113,7 +123,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/blt.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/bne.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/ALU/carry_lookahead_8bit.v}
-  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/BuildingBlocks/clock_divider.v}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/clock_divider.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/decode.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/BuildingBlocks/decoder_32.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/BuildingBlocks/dff_tri.v}
@@ -122,12 +132,12 @@ read_verilog -library xil_defaultlib {
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/multdiv/divider.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/execute.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/fetch.v}
-  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/InstructionBuilder/frame_rdy_instructionbuilder.v}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/frame_rdy_instructionbuilder.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/RegisterControlParsers/instruction_has_destination.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/j.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/jal.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/jr.v}
-  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/InstructionBuilder/jump_key_input_instructionbuilder.v}
+  {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/Controller/IOController/jump_key_input_instructionbuilder.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/load.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/Stages/memory.v}
   {C:/Users/joshr/Documents/Duke/Duke Fall 2021/ECE350/ECE350FinalProject/CPU/Components/StageComponents/InstructionParsers/OpcodeParsers/mult.v}

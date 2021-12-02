@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Nov 29 18:31:16 2021
+| Date         : Tue Nov 30 21:38:09 2021
 | Host         : LAPTOP-D1B7JSE5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
 | Design       : Main
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    48 |
-|    Minimum number of control sets                        |    48 |
+| Total control sets                                       |    51 |
+|    Minimum number of control sets                        |    51 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    44 |
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    48 |
+| Total control sets |    51 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     3 |
+| >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
-| >= 16              |    43 |
+| >= 16              |    47 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             430 |          181 |
+| No           | No                    | No                     |             561 |          314 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              65 |           17 |
-| Yes          | No                    | No                     |            1321 |          605 |
+| No           | Yes                   | No                     |              95 |           46 |
+| Yes          | No                    | No                     |            1352 |          686 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             100 |           34 |
+| Yes          | Yes                   | No                     |             100 |           29 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,54 +73,57 @@ Table of Contents
 +-----------------------------------------------+------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
 |                  Clock Signal                 |                           Enable Signal                          |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------------------------------+------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
-| ~processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/busy1_out                     | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/SR[0]      |                2 |              6 |         3.00 |
-|  vga_controller/processor_clock_divider/clk25 |                                                                  |                                                               |                5 |             10 |         2.00 |
-|  vga_controller/processor_clock_divider/clk25 | vga_controller/Display/vPos                                      |                                                               |                6 |             10 |         1.67 |
-|  clk_IBUF_BUFG                                |                                                                  |                                                               |                7 |             10 |         1.43 |
-| ~processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/div/done_reg_0                     |                                                               |                5 |             15 |         3.00 |
-|  processor_clk_BUFG                           |                                                                  |                                                               |                7 |             26 |         3.71 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg      | CPU/CPU/memory_stage/x_m_operand_O_reg/dff_tri20/dffe/q_reg_1 |               12 |             31 |         2.58 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/E[0]          | CPU/CPU/memory_stage/x_m_operand_O_reg/dff_tri20/dffe/SR[0]   |                8 |             31 |         3.88 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_20                      |                                                               |               27 |             32 |         1.19 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_17                      |                                                               |                8 |             32 |         4.00 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_16                      |                                                               |               17 |             32 |         1.88 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_26                      |                                                               |               13 |             32 |         2.46 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_13                      |                                                               |               10 |             32 |         3.20 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_14                      |                                                               |                8 |             32 |         4.00 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_22                      |                                                               |               22 |             32 |         1.45 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_19                      |                                                               |               14 |             32 |         2.29 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_23                      |                                                               |               27 |             32 |         1.19 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_25                      |                                                               |                8 |             32 |         4.00 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_27                      |                                                               |               14 |             32 |         2.29 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_21                      |                                                               |               20 |             32 |         1.60 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_28                      |                                                               |               12 |             32 |         2.67 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_24                      |                                                               |               11 |             32 |         2.91 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[2]                |                                                               |               16 |             32 |         2.00 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[11]               |                                                               |               28 |             32 |         1.14 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[3]                |                                                               |               13 |             32 |         2.46 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[13]               |                                                               |               15 |             32 |         2.13 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[10]               |                                                               |               20 |             32 |         1.60 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[8]                |                                                               |               24 |             32 |         1.33 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[1]                |                                                               |               12 |             32 |         2.67 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[4]                |                                                               |                9 |             32 |         3.56 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[9]                |                                                               |               17 |             32 |         1.88 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[12]               |                                                               |               18 |             32 |         1.78 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[0]                |                                                               |               13 |             32 |         2.46 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[5]                |                                                               |               20 |             32 |         1.60 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[7]                |                                                               |               15 |             32 |         2.13 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg      |                                                               |                8 |             32 |         4.00 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_15                      |                                                               |               22 |             32 |         1.45 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg_2    |                                                               |               19 |             32 |         1.68 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg_2    | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/q_reg_2    |               12 |             32 |         2.67 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[6]                |                                                               |               13 |             32 |         2.46 |
+| ~processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/busy1_out                     | CPU/CPU/executer/d_x_instruction_reg/dff_tri4/dffe/SR[0]      |                2 |              6 |         3.00 |
+|  vga_controller/processor_clock_divider/clk25 |                                                                  |                                                               |                4 |             10 |         2.50 |
+|  vga_controller/processor_clock_divider/clk25 | vga_controller/Display/vPos                                      |                                                               |                5 |             10 |         2.00 |
+| ~processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/div/done_reg_1                     |                                                               |                7 |             15 |         2.14 |
+|  processor_clk_BUFG                           |                                                                  |                                                               |                6 |             26 |         4.33 |
+|  processor_clk_BUFG                           |                                                                  | CPU/CPU/fetcher/program_counter_reg/dff_tri8/dffe/q_reg_0     |               29 |             30 |         1.03 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg      | CPU/CPU/memory_stage/x_m_operand_O_reg/dff_tri24/dffe/q_reg_0 |               12 |             31 |         2.58 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/E[0]          | CPU/CPU/memory_stage/x_m_operand_O_reg/dff_tri24/dffe/SR[0]   |                6 |             31 |         5.17 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_42                      |                                                               |               13 |             32 |         2.46 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_44                      |                                                               |               20 |             32 |         1.60 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_45                      |                                                               |               27 |             32 |         1.19 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_46                      |                                                               |               21 |             32 |         1.52 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_37                      |                                                               |               14 |             32 |         2.29 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_47                      |                                                               |               20 |             32 |         1.60 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_48                      |                                                               |               20 |             32 |         1.60 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_39                      |                                                               |               16 |             32 |         2.00 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_41                      |                                                               |               17 |             32 |         1.88 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_38                      |                                                               |               15 |             32 |         2.13 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_43                      |                                                               |               19 |             32 |         1.68 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_49                      |                                                               |               13 |             32 |         2.46 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_40                      |                                                               |               23 |             32 |         1.39 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_51                      |                                                               |               12 |             32 |         2.67 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_50                      |                                                               |               12 |             32 |         2.67 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_53                      |                                                               |               14 |             32 |         2.29 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_52                      |                                                               |               17 |             32 |         1.88 |
+|  processor_clk_BUFG                           | CPU/CPU/memory_stage/x_m_instruction_reg/dff_tri27/dffe/mwe      |                                                               |                8 |             32 |         4.00 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[8]                |                                                               |               22 |             32 |         1.45 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[10]               |                                                               |               21 |             32 |         1.52 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[5]                |                                                               |               24 |             32 |         1.33 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[7]                |                                                               |               22 |             32 |         1.45 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[13]               |                                                               |               23 |             32 |         1.39 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[1]                |                                                               |               15 |             32 |         2.13 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[12]               |                                                               |               24 |             32 |         1.33 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[2]                |                                                               |               17 |             32 |         1.88 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[3]                |                                                               |               12 |             32 |         2.67 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[4]                |                                                               |               19 |             32 |         1.68 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[0]                |                                                               |               17 |             32 |         1.88 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[6]                |                                                               |               23 |             32 |         1.39 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg      |                                                               |               12 |             32 |         2.67 |
 | ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/E[0]          |                                                               |                8 |             32 |         4.00 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_12                      |                                                               |                9 |             32 |         3.56 |
-|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/q_reg_18                      |                                                               |               17 |             32 |         1.88 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri27/dffe/in_enable0   |                                                               |               26 |             63 |         2.42 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[11]               |                                                               |               19 |             32 |         1.68 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri4/dffe/busy_reg      |                                                               |               17 |             32 |         1.88 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri4/dffe/busy_reg      | CPU/CPU/executer/d_x_instruction_reg/dff_tri4/dffe/q_reg_5    |                9 |             32 |         3.56 |
+|  processor_clk_BUFG                           | CPU/CPU/memory_stage/x_m_instruction_reg/dff_tri31/dffe/E[0]     |                                                               |                8 |             32 |         4.00 |
+|  processor_clk_BUFG                           | CPU/CPU/multdiv_stage/multdiv/mult/decoder_out[9]                |                                                               |               20 |             32 |         1.60 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri27/dffe/in_enable0   |                                                               |               20 |             62 |         3.10 |
 | ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/busy_reg_0[0] |                                                               |               16 |             64 |         4.00 |
 |  clk_IBUF_BUFG                                |                                                                  | vga_controller/processor_clock_divider/clear                  |               17 |             65 |         3.82 |
-| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri2/dffe/q_reg_2       |                                                               |               25 |             81 |         3.24 |
-| ~processor_clk_BUFG                           |                                                                  |                                                               |              162 |            384 |         2.37 |
+| ~processor_clk_BUFG                           | CPU/CPU/executer/d_x_instruction_reg/dff_tri4/dffe/q_reg_5       |                                                               |               22 |             81 |         3.68 |
+| ~processor_clk_BUFG                           |                                                                  |                                                               |              164 |            383 |         2.34 |
+|  clk_IBUF_BUFG                                |                                                                  |                                                               |             1318 |           5286 |         4.01 |
 +-----------------------------------------------+------------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
 
 
