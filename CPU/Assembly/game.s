@@ -1,7 +1,6 @@
-sw $r0, 0($r0)
-
 splash_init:
 lw $r27, 0($r0) #find high score
+add $r29, $r0, $r0
 addi $r1, $r0, 0              #pipe 1 x left edge
 addi $r2, $r0, 0              #pipe 1 y center
 addi $r3, $r0, 0              #pipe 1 y gap height
@@ -17,7 +16,6 @@ addi $r12, $r0, 0             #pipe 4 y gap height
 addi $r13, $r0, 0              #bird's y coord (top)
 addi $r14, $r0, 0 #bird's (right) x coord
 addi $r26, $r0, 0
-add $r29, $r0, $r0
 
 splash_loop:
 bne $r29, $r0, 1
